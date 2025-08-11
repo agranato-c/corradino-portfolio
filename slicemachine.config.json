@@ -2,5 +2,5 @@
   "repositoryName": "ag-portfolio-corradino",
   "adapter": "@slicemachine/adapter-next",
   "libraries": ["./slices"],
-  "localSliceSimulatorURL": "http://ag-portfolio-corradino/slice-simulator"
+  "localSliceSimulatorURL": "https://localhost:3000/slice-simulator"
 }
