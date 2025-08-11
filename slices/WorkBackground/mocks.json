@@ -1,0 +1,40 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"engineering_resume": {
+				"key": "49366b80-4858-4b17-bde0-32e46cd73892",
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "FileLink",
+					"id": "mock_Media_link",
+					"kind": "file",
+					"name": "mock_name",
+					"url": "https://source.unsplash.com/daily",
+					"size": "0",
+					"text": "necessary"
+				}
+			},
+			"calltoactionlink1": {
+				"key": "68f5f0ef-d5b7-428d-95f6-bab9250b7185",
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://twitter.com",
+					"text": "massage"
+				}
+			},
+			"calltoactionlink2": {
+				"__TYPE__": "LinkContent",
+				"key": "f2db9ce2-8b9c-4aff-8098-3f7dce5a90dd",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://twitter.com",
+					"text": "transportation"
+				}
+			}
+		},
+		"items": []
+	}
+]

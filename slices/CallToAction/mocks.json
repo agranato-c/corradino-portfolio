@@ -20,10 +20,8 @@
 					{
 						"type": "paragraph",
 						"content": {
-							"text": "It’s very easy to create stylish and beautiful prototypes for your future projects, both graphical and dynamic.",
-							"spans": []
-						},
-						"direction": "ltr"
+							"text": "Proident dolor fugiat ullamco laborum. Pariatur enim cupidatat elit labore."
+						}
 					}
 				]
 			},
@@ -60,8 +58,8 @@
 				}
 			},
 			"buttonlink2": {
-				"__TYPE__": "LinkContent",
 				"key": "da6002e3-e947-423a-abbd-ab068709e751",
+				"__TYPE__": "LinkContent",
 				"value": {
 					"__TYPE__": "ExternalLink",
 					"url": "http://twitter.com",

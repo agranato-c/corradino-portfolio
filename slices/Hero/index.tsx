@@ -45,7 +45,11 @@ const Hero: FC<HeroProps> = ({ slice }) => {
             )}
             <PrismicNextLink
               className="es-call-to-action__link"
-              field={slice.primary.callToActionLink}
+              field={slice.primary.callToActionLink1}
+            />
+            <PrismicNextLink
+              className="es-call-to-action__link"
+              field={slice.primary.callToActionLink2}
             />
           </div>
         </div>

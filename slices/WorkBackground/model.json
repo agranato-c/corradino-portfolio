@@ -1,0 +1,50 @@
+{
+  "id": "work_background",
+  "type": "SharedSlice",
+  "name": "WorkBackground",
+  "description": "WorkBackground",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "engineering_resume": {
+          "type": "Link",
+          "config": {
+            "label": "Engineering Resume",
+            "placeholder": "",
+            "select": "media",
+            "allowText": true
+          }
+        },
+        "calltoactionlink1": {
+          "type": "Link",
+          "config": {
+            "label": "callToActionLink1",
+            "placeholder": "",
+            "select": null,
+            "allowTargetBlank": true,
+            "allowText": true,
+            "repeat": false
+          }
+        },
+        "calltoactionlink2": {
+          "type": "Link",
+          "config": {
+            "label": "callToActionLink2",
+            "placeholder": "",
+            "select": null,
+            "allowTargetBlank": true,
+            "allowText": true,
+            "repeat": false
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

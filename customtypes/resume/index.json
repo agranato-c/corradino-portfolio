@@ -1,14 +1,21 @@
 {
   "format": "page",
   "id": "resume",
+  "label": "Resume",
+  "repeatable": false,
+  "status": true,
   "json": {
     "Main": {
       "slices": {
-        "config": {
-          "choices": {}
-        },
+        "type": "Slices",
         "fieldset": "Slice Zone",
-        "type": "Slices"
+        "config": {
+          "choices": {
+            "work_background": {
+              "type": "SharedSlice"
+            }
+          }
+        }
       }
     },
     "SEO & Metadata": {
@@ -38,8 +45,5 @@
         "type": "Image"
       }
     }
-  },
-  "label": "Resume",
-  "repeatable": false,
-  "status": true
+  }
 }

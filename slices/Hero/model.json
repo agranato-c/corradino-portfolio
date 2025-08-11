@@ -45,13 +45,24 @@
             "thumbnails": []
           }
         },
-        "callToActionLink": {
+        "callToActionLink1": {
           "type": "Link",
           "config": {
-            "label": "callToActionLink",
+            "label": "callToActionLink1",
             "placeholder": "",
             "select": null,
             "allowText": true
+          }
+        },
+        "callToActionLink2": {
+          "type": "Link",
+          "config": {
+            "label": "callToActionLink2",
+            "placeholder": "",
+            "select": null,
+            "allowTargetBlank": true,
+            "allowText": true,
+            "repeat": false
           }
         }
       },

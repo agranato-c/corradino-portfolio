@@ -50,20 +50,28 @@
 				"__TYPE__": "ImageContent",
 				"thumbnails": {}
 			},
-			"callToActionLink": {
-				"key": "c7a5c0b6-9f0c-4e9f-8e3d-5e4e3f8d3b8b",
-				"__TYPE__": "LinkContent",
-				"value": {
-					"__TYPE__": "ExternalLink",
-					"url": "https://prismic.io",
-					"target": "",
-					"text": "Call to Action"
-				}
-			},
 			"tagline": {
 				"__TYPE__": "FieldContent",
 				"value": "question",
 				"type": "Text"
+			},
+			"callToActionLink1": {
+				"key": "664707bb-7591-4949-8a83-646e44e1b11e",
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://slicemachine.dev",
+					"text": "pale"
+				}
+			},
+			"callToActionLink2": {
+				"__TYPE__": "LinkContent",
+				"key": "25afb3c2-fb91-46ff-8826-e3a7a86393fe",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://slicemachine.dev",
+					"text": "too"
+				}
 			}
 		},
 		"items": []

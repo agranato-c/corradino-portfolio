@@ -199,7 +199,7 @@ export type MainpageDocument<Lang extends string = string> =
     Lang
   >;
 
-type ResumeDocumentDataSlicesSlice = never;
+type ResumeDocumentDataSlicesSlice = WorkBackgroundSlice;
 
 /**
  * Content for Resume documents
@@ -477,14 +477,30 @@ export interface HeroSliceDefaultPrimary {
   image: prismic.ImageField<never>;
 
   /**
-   * callToActionLink field in *Hero → Default → Primary*
+   * callToActionLink1 field in *Hero → Default → Primary*
    *
    * - **Field Type**: Link
    * - **Placeholder**: *None*
-   * - **API ID Path**: hero.default.primary.callToActionLink
+   * - **API ID Path**: hero.default.primary.callToActionLink1
    * - **Documentation**: https://prismic.io/docs/fields/link
    */
-  callToActionLink: prismic.LinkField<
+  callToActionLink1: prismic.LinkField<
+    string,
+    string,
+    unknown,
+    prismic.FieldState,
+    never
+  >;
+
+  /**
+   * callToActionLink2 field in *Hero → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.default.primary.callToActionLink2
+   * - **Documentation**: https://prismic.io/docs/fields/link
+   */
+  callToActionLink2: prismic.LinkField<
     string,
     string,
     unknown,
@@ -519,6 +535,83 @@ type HeroSliceVariation = HeroSliceDefault;
  * - **Documentation**: https://prismic.io/docs/slices
  */
 export type HeroSlice = prismic.SharedSlice<"hero", HeroSliceVariation>;
+
+/**
+ * Primary content in *WorkBackground → Default → Primary*
+ */
+export interface WorkBackgroundSliceDefaultPrimary {
+  /**
+   * Engineering Resume field in *WorkBackground → Default → Primary*
+   *
+   * - **Field Type**: Link to Media
+   * - **Placeholder**: *None*
+   * - **API ID Path**: work_background.default.primary.engineering_resume
+   * - **Documentation**: https://prismic.io/docs/fields/link-to-media
+   */
+  engineering_resume: prismic.LinkToMediaField<prismic.FieldState, never>;
+
+  /**
+   * callToActionLink1 field in *WorkBackground → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: work_background.default.primary.calltoactionlink1
+   * - **Documentation**: https://prismic.io/docs/fields/link
+   */
+  calltoactionlink1: prismic.LinkField<
+    string,
+    string,
+    unknown,
+    prismic.FieldState,
+    never
+  >;
+
+  /**
+   * callToActionLink2 field in *WorkBackground → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: work_background.default.primary.calltoactionlink2
+   * - **Documentation**: https://prismic.io/docs/fields/link
+   */
+  calltoactionlink2: prismic.LinkField<
+    string,
+    string,
+    unknown,
+    prismic.FieldState,
+    never
+  >;
+}
+
+/**
+ * Default variation for WorkBackground Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type WorkBackgroundSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<WorkBackgroundSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *WorkBackground*
+ */
+type WorkBackgroundSliceVariation = WorkBackgroundSliceDefault;
+
+/**
+ * WorkBackground Shared Slice
+ *
+ * - **API ID**: `work_background`
+ * - **Description**: WorkBackground
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type WorkBackgroundSlice = prismic.SharedSlice<
+  "work_background",
+  WorkBackgroundSliceVariation
+>;
 
 declare module "@prismicio/client" {
   interface CreateClient {
@@ -561,6 +654,10 @@ declare module "@prismicio/client" {
       HeroSliceDefaultPrimary,
       HeroSliceVariation,
       HeroSliceDefault,
+      WorkBackgroundSlice,
+      WorkBackgroundSliceDefaultPrimary,
+      WorkBackgroundSliceVariation,
+      WorkBackgroundSliceDefault,
     };
   }
 }
