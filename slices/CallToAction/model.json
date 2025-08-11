@@ -38,14 +38,25 @@
             "single": "paragraph,preformatted,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
           }
         },
-        "buttonLink": {
+        "buttonLink1": {
           "type": "Link",
           "config": {
-            "label": "buttonLink",
-            "placeholder": "Redirect URL for CTA button",
+            "label": "buttonLink1",
+            "placeholder": "Redirect URL for 1st CTA button",
             "allowTargetBlank": true,
             "select": null,
             "allowText": true
+          }
+        },
+        "buttonlink2": {
+          "type": "Link",
+          "config": {
+            "label": "buttonLink2",
+            "placeholder": "Redirect URL for 2nd CTA button",
+            "select": null,
+            "allowTargetBlank": true,
+            "allowText": true,
+            "repeat": false
           }
         }
       },

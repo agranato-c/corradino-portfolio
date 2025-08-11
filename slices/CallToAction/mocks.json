@@ -27,15 +27,6 @@
 					}
 				]
 			},
-			"buttonLink": {
-				"key": "123e4567-e89b-12d3-a456-426614174000",
-				"__TYPE__": "LinkContent",
-				"value": {
-					"__TYPE__": "ExternalLink",
-					"url": "https://twitter.com/prismicio",
-					"text": "Learn more"
-				}
-			},
 			"image": {
 				"origin": {
 					"id": "9aOswReDKPo",
@@ -58,6 +49,24 @@
 				"alt": "Example Image",
 				"__TYPE__": "ImageContent",
 				"thumbnails": {}
+			},
+			"buttonLink1": {
+				"key": "ebfcf960-12ca-41bd-8c06-6112e441e7b8",
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://prismic.io",
+					"text": "boat"
+				}
+			},
+			"buttonlink2": {
+				"__TYPE__": "LinkContent",
+				"key": "da6002e3-e947-423a-abbd-ab068709e751",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://twitter.com",
+					"text": "visit"
+				}
 			}
 		},
 		"items": []
