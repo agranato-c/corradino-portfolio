@@ -324,10 +324,10 @@ export interface CallToActionSliceDefaultPrimary {
    *
    * - **Field Type**: Link
    * - **Placeholder**: Redirect URL for 2nd CTA button
-   * - **API ID Path**: call_to_action.default.primary.buttonlink2
+   * - **API ID Path**: call_to_action.default.primary.buttonLink2
    * - **Documentation**: https://prismic.io/docs/fields/link
    */
-  buttonlink2: prismic.LinkField<
+  buttonLink2: prismic.LinkField<
     string,
     string,
     unknown,
@@ -384,14 +384,30 @@ export interface CallToActionSliceAlignLeftPrimary {
   paragraph: prismic.RichTextField;
 
   /**
-   * buttonLink field in *CallToAction → AlignLeft → Primary*
+   * buttonLink1 field in *CallToAction → AlignLeft → Primary*
    *
    * - **Field Type**: Link
    * - **Placeholder**: Redirect URL for CTA button
-   * - **API ID Path**: call_to_action.alignLeft.primary.buttonLink
+   * - **API ID Path**: call_to_action.alignLeft.primary.buttonLink1
    * - **Documentation**: https://prismic.io/docs/fields/link
    */
-  buttonLink: prismic.LinkField<
+  buttonLink1: prismic.LinkField<
+    string,
+    string,
+    unknown,
+    prismic.FieldState,
+    never
+  >;
+
+  /**
+   * buttonLink2 field in *CallToAction → AlignLeft → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: call_to_action.alignLeft.primary.buttonlink2
+   * - **Documentation**: https://prismic.io/docs/fields/link
+   */
+  buttonlink2: prismic.LinkField<
     string,
     string,
     unknown,

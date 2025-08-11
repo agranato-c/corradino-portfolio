@@ -35,8 +35,12 @@ const CallToAction: FC<CallToActionProps> = ({ slice }) => {
         </div>
         <PrismicNextLink
           className="es-call-to-action__button"
-          field={slice.primary.buttonLink}
+          field={slice.primary.buttonLink1}
         />
+        {/* <PrismicNextLink
+          className="es-call-to-action__button"
+          field={slice.primary.buttonLink2}
+        /> */}
       </div>
 
       <style>

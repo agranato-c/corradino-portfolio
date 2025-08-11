@@ -48,7 +48,7 @@
             "allowText": true
           }
         },
-        "buttonlink2": {
+        "buttonLink2": {
           "type": "Link",
           "config": {
             "label": "buttonLink2",
@@ -96,14 +96,25 @@
             "single": "paragraph,preformatted,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
           }
         },
-        "buttonLink": {
+        "buttonLink1": {
           "type": "Link",
           "config": {
-            "label": "buttonLink",
+            "label": "buttonLink1",
             "placeholder": "Redirect URL for CTA button",
             "allowTargetBlank": true,
             "select": null,
             "allowText": true
+          }
+        },
+        "buttonlink2": {
+          "type": "Link",
+          "config": {
+            "label": "buttonLink2",
+            "placeholder": "",
+            "select": null,
+            "allowTargetBlank": true,
+            "allowText": true,
+            "repeat": false
           }
         }
       },

@@ -57,13 +57,13 @@
 					"text": "boat"
 				}
 			},
-			"buttonlink2": {
-				"key": "da6002e3-e947-423a-abbd-ab068709e751",
+			"buttonLink2": {
+				"key": "6f222f1b-7e3e-4faf-8e9c-d124235f5c59",
 				"__TYPE__": "LinkContent",
 				"value": {
 					"__TYPE__": "ExternalLink",
-					"url": "http://twitter.com",
-					"text": "visit"
+					"url": "http://google.com",
+					"text": "pay"
 				}
 			}
 		},
@@ -122,13 +122,22 @@
 					}
 				]
 			},
-			"buttonLink": {
-				"key": "123e4567-e89b-12d3-a456-426614174001",
+			"buttonLink1": {
+				"key": "386b21ad-cf58-41a2-82fd-d1c50555e54f",
 				"__TYPE__": "LinkContent",
 				"value": {
 					"__TYPE__": "ExternalLink",
-					"url": "https://prismic.io",
-					"text": "Learn more"
+					"url": "https://slicemachine.dev",
+					"text": "another"
+				}
+			},
+			"buttonlink2": {
+				"__TYPE__": "LinkContent",
+				"key": "e179c60a-6c31-419f-a052-d70c42c6154d",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://twitter.com",
+					"text": "cannot"
 				}
 			}
 		},
