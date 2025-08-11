@@ -3,7 +3,7 @@ import {
   type ClientConfig,
   type Route,
 } from "@prismicio/client";
-import { enableAutoPreviews} from "@prismicio/next/";
+import { enableAutoPreviews } from "@prismicio/next";
 import sm from "./slicemachine.config.json";
 
 /**
