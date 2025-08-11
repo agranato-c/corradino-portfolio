@@ -14,12 +14,7 @@ const Hero: FC<HeroProps> = ({ slice }) => {
     >
       <div
         className={`
-            es-fullpage-hero__content
-            ${
-              slice.variation === "imageRight"
-                ? "es-fullpage-hero__image--right"
-                : "es-fullpage-hero__image--left"
-            }
+          
         `}
       >
         <div>
@@ -33,9 +28,9 @@ const Hero: FC<HeroProps> = ({ slice }) => {
 
         <div className="es-fullpage-hero__content-right">
           <div className="es-fullpage-hero__content__intro">
-            {isFilled.keyText(slice.primary.eyebrowHeadline) && (
+            {isFilled.keyText(slice.primary.tagline) && (
               <p className="es-fullpage-hero__content__intro__eyebrow">
-                {slice.primary.eyebrowHeadline}
+                {slice.primary.tagline}
               </p>
             )}
             {isFilled.richText(slice.primary.title) && (
