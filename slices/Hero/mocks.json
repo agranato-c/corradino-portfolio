@@ -14,11 +14,6 @@
 					}
 				]
 			},
-			"eyebrowHeadline": {
-				"__TYPE__": "FieldContent",
-				"value": "twice",
-				"type": "Text"
-			},
 			"description": {
 				"__TYPE__": "StructuredTextContent",
 				"value": [
@@ -64,85 +59,11 @@
 					"target": "",
 					"text": "Call to Action"
 				}
-			}
-		},
-		"items": []
-	},
-	{
-		"__TYPE__": "SharedSliceContent",
-		"variation": "imageRight",
-		"primary": {
-			"eyebrowHeadline": {
+			},
+			"tagline": {
 				"__TYPE__": "FieldContent",
-				"type": "Text",
-				"value": "Image Right"
-			},
-			"title": {
-				"__TYPE__": "StructuredTextContent",
-				"value": [
-					{
-						"type": "heading1",
-						"content": {
-							"text": "Build a website",
-							"spans": []
-						},
-						"direction": "ltr"
-					}
-				]
-			},
-			"description": {
-				"__TYPE__": "StructuredTextContent",
-				"value": [
-					{
-						"type": "paragraph",
-						"content": {
-							"text": "Learn how prismic.io helps thousands of businesses around the world with some of our customers’ use-cases, including Image Right slice variations!",
-							"spans": []
-						},
-						"direction": "ltr"
-					},
-					{
-						"type": "paragraph",
-						"content": {
-							"text": "\nBy the way: this RichText field supports multi-paragraph!",
-							"spans": []
-						},
-						"direction": "ltr"
-					}
-				]
-			},
-			"image": {
-				"origin": {
-					"id": "euqiHwS38Rw",
-					"url": "https://images.unsplash.com/photo-1595475207225-428b62bda831?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwyMHx8ZnJ1aXR8ZW58MHx8fHwxNjk0NDQyOTc2fDA&ixlib=rb-4.0.3&q=85",
-					"width": 2500,
-					"height": 2500
-				},
-				"url": "https://images.unsplash.com/photo-1595475207225-428b62bda831?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMzc0NjN8MHwxfHNlYXJjaHwyMHx8ZnJ1aXR8ZW58MHx8fHwxNjk0NDQyOTc2fDA&ixlib=rb-4.0.3&q=85",
-				"width": 2500,
-				"height": 2500,
-				"edit": {
-					"background": "transparent",
-					"zoom": 1,
-					"crop": {
-						"x": 0,
-						"y": 0
-					}
-				},
-				"credits": null,
-				"alt": "Image Content",
-				"__TYPE__": "ImageContent",
-				"thumbnails": {}
-			},
-			"callToActionLink": {
-				"key": "d1a5c0b6-9f0c-4e9f-8e3d-5e4e3f8d3b8b",
-				"__TYPE__": "LinkContent",
-				"value": {
-					"__TYPE__": "ExternalLink",
-					"url": "https://prismic.io",
-					"target": "",
-					"text": "Call to Action"
-				}
+				"value": "question",
+				"type": "Text"
 			}
 		},
 		"items": []
