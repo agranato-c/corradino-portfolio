@@ -304,6 +304,48 @@ export interface CallToActionSliceDefaultPrimary {
   paragraph: prismic.RichTextField;
 
   /**
+   * Project Type field in *CallToAction → Default → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **API ID Path**: call_to_action.default.primary.project_type
+   * - **Documentation**: https://prismic.io/docs/fields/select
+   */
+  project_type: prismic.SelectField<"Modeling" | "Planning" | "D&I" | "Other">;
+
+  /**
+   * Making Contact field in *CallToAction → Default → Primary*
+   *
+   * - **Field Type**: Boolean
+   * - **Placeholder**: *None*
+   * - **Default Value**: false
+   * - **API ID Path**: call_to_action.default.primary.making_contact
+   * - **Documentation**: https://prismic.io/docs/fields/boolean
+   */
+  making_contact: prismic.BooleanField;
+
+  /**
+   * Submit field in *CallToAction → Default → Primary*
+   *
+   * - **Field Type**: Boolean
+   * - **Placeholder**: *None*
+   * - **Default Value**: false
+   * - **API ID Path**: call_to_action.default.primary.submit
+   * - **Documentation**: https://prismic.io/docs/fields/boolean
+   */
+  submit: prismic.BooleanField;
+
+  /**
+   * Ready to Submit field in *CallToAction → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: call_to_action.default.primary.ready_to_submit
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  ready_to_submit: prismic.KeyTextField;
+
+  /**
    * buttonLink1 field in *CallToAction → Default → Primary*
    *
    * - **Field Type**: Link
@@ -556,6 +598,16 @@ export type HeroSlice = prismic.SharedSlice<"hero", HeroSliceVariation>;
  * Primary content in *WorkBackground → Default → Primary*
  */
 export interface WorkBackgroundSliceDefaultPrimary {
+  /**
+   * Education field in *WorkBackground → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: OSU, UIUC
+   * - **API ID Path**: work_background.default.primary.education
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  education: prismic.RichTextField;
+
   /**
    * Engineering Resume field in *WorkBackground → Default → Primary*
    *

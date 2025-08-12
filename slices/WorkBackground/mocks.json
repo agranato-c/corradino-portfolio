@@ -26,13 +26,24 @@
 				}
 			},
 			"calltoactionlink2": {
-				"__TYPE__": "LinkContent",
 				"key": "f2db9ce2-8b9c-4aff-8098-3f7dce5a90dd",
+				"__TYPE__": "LinkContent",
 				"value": {
 					"__TYPE__": "ExternalLink",
 					"url": "http://twitter.com",
 					"text": "transportation"
 				}
+			},
+			"education": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading1",
+						"content": {
+							"text": "Essential"
+						}
+					}
+				]
 			}
 		},
 		"items": []

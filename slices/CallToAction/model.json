@@ -38,6 +38,44 @@
             "multi": "paragraph,preformatted,strong,hyperlink,image,embed,list-item,o-list-item,rtl"
           }
         },
+        "project_type": {
+          "type": "Select",
+          "config": {
+            "label": "Project Type",
+            "placeholder": "",
+            "options": [
+              "Modeling",
+              "Planning",
+              "D&I",
+              "Other"
+            ]
+          }
+        },
+        "making_contact": {
+          "type": "Boolean",
+          "config": {
+            "label": "Making Contact",
+            "placeholder_false": "false",
+            "placeholder_true": "true",
+            "default_value": false
+          }
+        },
+        "submit": {
+          "type": "Boolean",
+          "config": {
+            "label": "Submit",
+            "placeholder_false": "false",
+            "placeholder_true": "true",
+            "default_value": false
+          }
+        },
+        "ready_to_submit": {
+          "type": "Text",
+          "config": {
+            "label": "Ready to Submit",
+            "placeholder": ""
+          }
+        },
         "buttonLink1": {
           "type": "Link",
           "config": {

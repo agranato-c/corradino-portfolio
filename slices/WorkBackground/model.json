@@ -12,6 +12,15 @@
       "description": "Default",
       "imageUrl": "",
       "primary": {
+        "education": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Education",
+            "placeholder": "OSU, UIUC",
+            "allowTargetBlank": true,
+            "multi": "heading1,heading2,heading3,heading4,heading5,heading6,strong,em,image,embed,list-item,o-list-item,rtl"
+          }
+        },
         "engineering_resume": {
           "type": "Link",
           "config": {

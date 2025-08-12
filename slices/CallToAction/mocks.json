@@ -65,6 +65,24 @@
 					"url": "http://google.com",
 					"text": "pay"
 				}
+			},
+			"making_contact": {
+				"__TYPE__": "BooleanContent",
+				"value": true
+			},
+			"project_type": {
+				"__TYPE__": "FieldContent",
+				"value": "D&I",
+				"type": "Select"
+			},
+			"submit": {
+				"__TYPE__": "BooleanContent",
+				"value": false
+			},
+			"ready_to_submit": {
+				"__TYPE__": "FieldContent",
+				"value": "here",
+				"type": "Text"
 			}
 		},
 		"items": []
@@ -132,8 +150,8 @@
 				}
 			},
 			"buttonlink2": {
-				"__TYPE__": "LinkContent",
 				"key": "e179c60a-6c31-419f-a052-d70c42c6154d",
+				"__TYPE__": "LinkContent",
 				"value": {
 					"__TYPE__": "ExternalLink",
 					"url": "http://twitter.com",
