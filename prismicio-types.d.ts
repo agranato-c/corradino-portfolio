@@ -800,6 +800,26 @@ export type ProjectTypesSlice = prismic.SharedSlice<
  */
 export interface WorkBackgroundSliceDefaultPrimary {
   /**
+   * Image field in *WorkBackground → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: work_background.default.primary.image
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Label field in *WorkBackground → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: Education
+   * - **API ID Path**: work_background.default.primary.label
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  label: prismic.RichTextField;
+
+  /**
    * Education field in *WorkBackground → Default → Primary*
    *
    * - **Field Type**: Rich Text

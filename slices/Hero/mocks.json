@@ -65,8 +65,8 @@
 				}
 			},
 			"callToActionLink2": {
-				"__TYPE__": "LinkContent",
 				"key": "25afb3c2-fb91-46ff-8826-e3a7a86393fe",
+				"__TYPE__": "LinkContent",
 				"value": {
 					"__TYPE__": "ExternalLink",
 					"url": "https://slicemachine.dev",

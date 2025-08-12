@@ -74,9 +74,6 @@ const CallToAction: FC<CallToActionProps> = ({ slice }) => {
             field={slice.primary.buttonLink2[0]}
           />
         )} */}
-        {slice.primary.projects.map((item) => (
-          // Render the item
-        ))}
       </div>
 
       <style>
