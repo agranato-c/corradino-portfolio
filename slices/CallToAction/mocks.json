@@ -82,11 +82,6 @@
 				"__TYPE__": "BooleanContent",
 				"value": true
 			},
-			"project_type": {
-				"__TYPE__": "FieldContent",
-				"value": "D&I",
-				"type": "Select"
-			},
 			"submit": {
 				"__TYPE__": "BooleanContent",
 				"value": false
@@ -95,6 +90,14 @@
 				"__TYPE__": "FieldContent",
 				"value": "here",
 				"type": "Text"
+			},
+			"theprojects": {
+				"key": "322c0967-cd97-44d1-b427-9e1983907844",
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "DocumentLink",
+					"id": "mock_document_id"
+				}
 			}
 		},
 		"items": []
@@ -190,8 +193,8 @@
 				"type": "Link",
 				"value": [
 					{
-						"__TYPE__": "LinkContent",
 						"key": "2f7cef20-c2bf-4a45-8395-b4cfa4bdf8fc",
+						"__TYPE__": "LinkContent",
 						"value": {
 							"__TYPE__": "ExternalLink",
 							"url": "http://twitter.com",

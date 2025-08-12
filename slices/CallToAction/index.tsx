@@ -34,16 +34,12 @@ const CallToAction: FC<CallToActionProps> = ({ slice }) => {
             </div>
           )}
         </div>
-        {slice.primary.project_type && (
-          <div className="es-call-to-action__content__project-type">
-            {slice.primary.project_type}
-          </div>
-        )}
         {slice.primary.making_contact && (
           <div className="es-call-to-action__content__making-contact">
             {slice.primary.making_contact}
           </div>
         )}
+
         {slice.primary.submit && (
           <div className="es-call-to-action__content__submit">
             {slice.primary.submit}

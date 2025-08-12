@@ -38,19 +38,6 @@
             "multi": "paragraph,preformatted,strong,hyperlink,image,embed,list-item,o-list-item,rtl"
           }
         },
-        "project_type": {
-          "type": "Select",
-          "config": {
-            "label": "Project Type",
-            "placeholder": "",
-            "options": [
-              "Modeling",
-              "Planning",
-              "D&I",
-              "Other"
-            ]
-          }
-        },
         "making_contact": {
           "type": "Boolean",
           "config": {
@@ -58,6 +45,24 @@
             "placeholder_false": "false",
             "placeholder_true": "true",
             "default_value": false
+          }
+        },
+        "theprojects": {
+          "type": "Link",
+          "config": {
+            "label": "TheProjects",
+            "select": "document",
+            "repeat": false,
+            "customtypes": [
+              {
+                "id": "projectdetails",
+                "fields": [
+                  "meta_title",
+                  "meta_description",
+                  "meta_image"
+                ]
+              }
+            ]
           }
         },
         "submit": {

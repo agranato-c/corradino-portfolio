@@ -370,16 +370,6 @@ export interface CallToActionSliceDefaultPrimary {
   paragraph: prismic.RichTextField;
 
   /**
-   * Project Type field in *CallToAction → Default → Primary*
-   *
-   * - **Field Type**: Select
-   * - **Placeholder**: *None*
-   * - **API ID Path**: call_to_action.default.primary.project_type
-   * - **Documentation**: https://prismic.io/docs/fields/select
-   */
-  project_type: prismic.SelectField<"Modeling" | "Planning" | "D&I" | "Other">;
-
-  /**
    * Making Contact field in *CallToAction → Default → Primary*
    *
    * - **Field Type**: Boolean
@@ -389,6 +379,23 @@ export interface CallToActionSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/fields/boolean
    */
   making_contact: prismic.BooleanField;
+
+  /**
+   * TheProjects field in *CallToAction → Default → Primary*
+   *
+   * - **Field Type**: Content Relationship
+   * - **Placeholder**: *None*
+   * - **API ID Path**: call_to_action.default.primary.theprojects
+   * - **Documentation**: https://prismic.io/docs/fields/content-relationship
+   */
+  theprojects: ContentRelationshipFieldWithData<
+    [
+      {
+        id: "projectdetails";
+        fields: ["meta_title", "meta_description", "meta_image"];
+      },
+    ]
+  >;
 
   /**
    * Submit field in *CallToAction → Default → Primary*
