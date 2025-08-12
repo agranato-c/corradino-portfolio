@@ -50,20 +50,33 @@ const CallToAction: FC<CallToActionProps> = ({ slice }) => {
             {slice.primary.ready_to_submit}
           </div>
         )}
-        {Array.isArray(slice.primary.buttonLink1) && slice.primary.buttonLink1[0] && (
+        {slice.primary.buttonLink1.map((link) => (
+          <PrismicNextLink
+            key={link.key}
+            field={link}
+          />
+        ))}
+        {slice.primary.buttonLink2.map((link) => (
+          <PrismicNextLink
+            key={link.key}
+            field={link}
+          />
+        ))}
+        {/* {Array.isArray(slice.primary.buttonLink1) && slice.primary.buttonLink1[0] && (
           <PrismicNextLink
             className="es-call-to-action__button"
             field={slice.primary.buttonLink1[0]}
           />
         )}
-
         {Array.isArray(slice.primary.buttonLink2) && slice.primary.buttonLink2[0] && (
           <PrismicNextLink
             className="es-call-to-action__button"
             field={slice.primary.buttonLink2[0]}
           />
-        )}
-
+        )} */}
+        {slice.primary.projects.map((item) => (
+          // Render the item
+        ))}
       </div>
 
       <style>

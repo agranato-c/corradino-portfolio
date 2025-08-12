@@ -91,13 +91,59 @@
 				"value": "here",
 				"type": "Text"
 			},
-			"theprojects": {
-				"key": "322c0967-cd97-44d1-b427-9e1983907844",
-				"__TYPE__": "LinkContent",
-				"value": {
-					"__TYPE__": "DocumentLink",
-					"id": "mock_document_id"
-				}
+			"projects": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"Modeling",
+								{
+									"key": "fe37b53c-2963-40da-bfc9-330f27f00df3",
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "DocumentLink",
+										"id": "mock_document_id"
+									}
+								}
+							],
+							[
+								"planning",
+								{
+									"key": "99465445-a588-464d-8d1e-db09283cc1f3",
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "DocumentLink",
+										"id": "mock_document_id"
+									}
+								}
+							],
+							[
+								"datainnovation",
+								{
+									"key": "511f1ab2-a3f1-4558-a84f-b27e7c16beb1",
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "DocumentLink",
+										"id": "mock_document_id"
+									}
+								}
+							],
+							[
+								"other",
+								{
+									"key": "06969c59-dfce-4725-9cc0-f1b63fb88a2d",
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "DocumentLink",
+										"id": "mock_document_id"
+									}
+								}
+							]
+						]
+					}
+				]
 			}
 		},
 		"items": []

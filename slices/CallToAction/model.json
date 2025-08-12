@@ -47,24 +47,6 @@
             "default_value": false
           }
         },
-        "theprojects": {
-          "type": "Link",
-          "config": {
-            "label": "TheProjects",
-            "select": "document",
-            "repeat": false,
-            "customtypes": [
-              {
-                "id": "projectdetails",
-                "fields": [
-                  "meta_title",
-                  "meta_description",
-                  "meta_image"
-                ]
-              }
-            ]
-          }
-        },
         "submit": {
           "type": "Boolean",
           "config": {
@@ -101,6 +83,60 @@
             "allowTargetBlank": true,
             "allowText": true,
             "repeat": true
+          }
+        },
+        "projects": {
+          "type": "Group",
+          "config": {
+            "label": "Projects",
+            "repeat": true,
+            "fields": {
+              "Modeling": {
+                "type": "Link",
+                "config": {
+                  "label": "Modeling",
+                  "select": "document",
+                  "repeat": false,
+                  "customtypes": [
+                    {
+                      "id": "projectdetails",
+                      "fields": [
+                        "meta_title",
+                        "meta_description",
+                        "meta_image"
+                      ]
+                    }
+                  ]
+                }
+              },
+              "planning": {
+                "type": "Link",
+                "config": {
+                  "label": "Planning",
+                  "select": "document",
+                  "repeat": false,
+                  "customtypes": []
+                }
+              },
+              "datainnovation": {
+                "type": "Link",
+                "config": {
+                  "label": "DataInnovation",
+                  "select": "document",
+                  "repeat": false,
+                  "customtypes": []
+                }
+              },
+              "other": {
+                "type": "Link",
+                "config": {
+                  "label": "Other",
+                  "select": "document",
+                  "repeat": false,
+                  "customtypes": []
+                }
+              }
+            }
           }
         }
       },

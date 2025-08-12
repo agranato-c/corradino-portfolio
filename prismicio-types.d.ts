@@ -336,6 +336,58 @@ export type AllDocumentTypes =
   | ResumeDocument;
 
 /**
+ * Item in *CallToAction → Default → Primary → Projects*
+ */
+export interface CallToActionSliceDefaultPrimaryProjectsItem {
+  /**
+   * Modeling field in *CallToAction → Default → Primary → Projects*
+   *
+   * - **Field Type**: Content Relationship
+   * - **Placeholder**: *None*
+   * - **API ID Path**: call_to_action.default.primary.projects[].Modeling
+   * - **Documentation**: https://prismic.io/docs/fields/content-relationship
+   */
+  Modeling: ContentRelationshipFieldWithData<
+    [
+      {
+        id: "projectdetails";
+        fields: ["meta_title", "meta_description", "meta_image"];
+      },
+    ]
+  >;
+
+  /**
+   * Planning field in *CallToAction → Default → Primary → Projects*
+   *
+   * - **Field Type**: Content Relationship
+   * - **Placeholder**: *None*
+   * - **API ID Path**: call_to_action.default.primary.projects[].planning
+   * - **Documentation**: https://prismic.io/docs/fields/content-relationship
+   */
+  planning: prismic.ContentRelationshipField;
+
+  /**
+   * DataInnovation field in *CallToAction → Default → Primary → Projects*
+   *
+   * - **Field Type**: Content Relationship
+   * - **Placeholder**: *None*
+   * - **API ID Path**: call_to_action.default.primary.projects[].datainnovation
+   * - **Documentation**: https://prismic.io/docs/fields/content-relationship
+   */
+  datainnovation: prismic.ContentRelationshipField;
+
+  /**
+   * Other field in *CallToAction → Default → Primary → Projects*
+   *
+   * - **Field Type**: Content Relationship
+   * - **Placeholder**: *None*
+   * - **API ID Path**: call_to_action.default.primary.projects[].other
+   * - **Documentation**: https://prismic.io/docs/fields/content-relationship
+   */
+  other: prismic.ContentRelationshipField;
+}
+
+/**
  * Primary content in *CallToAction → Default → Primary*
  */
 export interface CallToActionSliceDefaultPrimary {
@@ -381,23 +433,6 @@ export interface CallToActionSliceDefaultPrimary {
   making_contact: prismic.BooleanField;
 
   /**
-   * TheProjects field in *CallToAction → Default → Primary*
-   *
-   * - **Field Type**: Content Relationship
-   * - **Placeholder**: *None*
-   * - **API ID Path**: call_to_action.default.primary.theprojects
-   * - **Documentation**: https://prismic.io/docs/fields/content-relationship
-   */
-  theprojects: ContentRelationshipFieldWithData<
-    [
-      {
-        id: "projectdetails";
-        fields: ["meta_title", "meta_description", "meta_image"];
-      },
-    ]
-  >;
-
-  /**
    * Submit field in *CallToAction → Default → Primary*
    *
    * - **Field Type**: Boolean
@@ -440,6 +475,18 @@ export interface CallToActionSliceDefaultPrimary {
    */
   buttonLink2: prismic.Repeatable<
     prismic.LinkField<string, string, unknown, prismic.FieldState, never>
+  >;
+
+  /**
+   * Projects field in *CallToAction → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: call_to_action.default.primary.projects[]
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */
+  projects: prismic.GroupField<
+    Simplify<CallToActionSliceDefaultPrimaryProjectsItem>
   >;
 }
 
@@ -870,6 +917,7 @@ declare module "@prismicio/client" {
       ResumeDocumentDataSlicesSlice,
       AllDocumentTypes,
       CallToActionSlice,
+      CallToActionSliceDefaultPrimaryProjectsItem,
       CallToActionSliceDefaultPrimary,
       CallToActionSliceAlignLeftPrimary,
       CallToActionSliceVariation,
