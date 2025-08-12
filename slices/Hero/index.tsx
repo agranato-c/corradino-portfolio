@@ -17,14 +17,14 @@ const Hero: FC<HeroProps> = ({ slice }) => {
           
         `}
       >
-        <div>
+        {/* <div>
           {isFilled.image(slice.primary.image) && (
             <PrismicNextImage
               field={slice.primary.image}
               className="es-fullpage-hero__image"
             />
           )}
-        </div>
+        </div> */}
 
         <div className="es-fullpage-hero__content-right">
           <div className="es-fullpage-hero__content__intro">
@@ -36,6 +36,13 @@ const Hero: FC<HeroProps> = ({ slice }) => {
             {isFilled.richText(slice.primary.title) && (
               <div className="es-fullpage-hero__content__intro__headline">
                 <PrismicRichText field={slice.primary.title} />
+              </div>
+            )}
+            {isFilled.image(slice.primary.image) && (
+              <div className="es-fullpage-hero__image">
+                <PrismicNextImage
+                  field={slice.primary.image}
+                />
               </div>
             )}
             {isFilled.richText(slice.primary.description) && (
