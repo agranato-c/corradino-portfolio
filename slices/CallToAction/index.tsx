@@ -33,14 +33,40 @@ const CallToAction: FC<CallToActionProps> = ({ slice }) => {
             </div>
           )}
         </div>
-        <PrismicNextLink
-          className="es-call-to-action__button"
-          field={slice.primary.buttonLink1}
-        />
-        {/* <PrismicNextLink
-          className="es-call-to-action__button"
-          field={slice.primary.buttonLink2}
-        /> */}
+        {slice.primary.project_type && (
+          <div className="es-call-to-action__content__project-type">
+            {slice.primary.project_type}
+          </div>
+        )}
+        {slice.primary.making_contact && (
+          <div className="es-call-to-action__content__making-contact">
+            {slice.primary.making_contact}
+          </div>
+        )}
+        {slice.primary.submit && (
+          <div className="es-call-to-action__content__submit">
+            {slice.primary.submit}
+          </div>
+        )}
+        {slice.primary.ready_to_submit && (
+          <div className="es-call-to-action__content__ready-to-submit">
+            {slice.primary.ready_to_submit}
+          </div>
+        )}
+        {Array.isArray(slice.primary.buttonLink1) && slice.primary.buttonLink1[0] && (
+          <PrismicNextLink
+            className="es-call-to-action__button"
+            field={slice.primary.buttonLink1[0]}
+          />
+        )}
+
+        {Array.isArray(slice.primary.buttonLink2) && slice.primary.buttonLink2[0] && (
+          <PrismicNextLink
+            className="es-call-to-action__button"
+            field={slice.primary.buttonLink2[0]}
+          />
+        )}
+
       </div>
 
       <style>

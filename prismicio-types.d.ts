@@ -353,12 +353,8 @@ export interface CallToActionSliceDefaultPrimary {
    * - **API ID Path**: call_to_action.default.primary.buttonLink1
    * - **Documentation**: https://prismic.io/docs/fields/link
    */
-  buttonLink1: prismic.LinkField<
-    string,
-    string,
-    unknown,
-    prismic.FieldState,
-    never
+  buttonLink1: prismic.Repeatable<
+    prismic.LinkField<string, string, unknown, prismic.FieldState, never>
   >;
 
   /**
@@ -369,12 +365,8 @@ export interface CallToActionSliceDefaultPrimary {
    * - **API ID Path**: call_to_action.default.primary.buttonLink2
    * - **Documentation**: https://prismic.io/docs/fields/link
    */
-  buttonLink2: prismic.LinkField<
-    string,
-    string,
-    unknown,
-    prismic.FieldState,
-    never
+  buttonLink2: prismic.Repeatable<
+    prismic.LinkField<string, string, unknown, prismic.FieldState, never>
   >;
 }
 
@@ -426,6 +418,48 @@ export interface CallToActionSliceAlignLeftPrimary {
   paragraph: prismic.RichTextField;
 
   /**
+   * Project Type field in *CallToAction → AlignLeft → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **API ID Path**: call_to_action.alignLeft.primary.project_type
+   * - **Documentation**: https://prismic.io/docs/fields/select
+   */
+  project_type: prismic.SelectField<"Modeling" | "Planning" | "D&I" | "Other">;
+
+  /**
+   * Making Contact field in *CallToAction → AlignLeft → Primary*
+   *
+   * - **Field Type**: Boolean
+   * - **Placeholder**: *None*
+   * - **Default Value**: false
+   * - **API ID Path**: call_to_action.alignLeft.primary.making_contact
+   * - **Documentation**: https://prismic.io/docs/fields/boolean
+   */
+  making_contact: prismic.BooleanField;
+
+  /**
+   * Submit field in *CallToAction → AlignLeft → Primary*
+   *
+   * - **Field Type**: Boolean
+   * - **Placeholder**: *None*
+   * - **Default Value**: false
+   * - **API ID Path**: call_to_action.alignLeft.primary.submit
+   * - **Documentation**: https://prismic.io/docs/fields/boolean
+   */
+  submit: prismic.BooleanField;
+
+  /**
+   * Ready to Submit field in *CallToAction → AlignLeft → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: call_to_action.alignLeft.primary.ready_to_submit
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  ready_to_submit: prismic.KeyTextField;
+
+  /**
    * buttonLink1 field in *CallToAction → AlignLeft → Primary*
    *
    * - **Field Type**: Link
@@ -433,12 +467,8 @@ export interface CallToActionSliceAlignLeftPrimary {
    * - **API ID Path**: call_to_action.alignLeft.primary.buttonLink1
    * - **Documentation**: https://prismic.io/docs/fields/link
    */
-  buttonLink1: prismic.LinkField<
-    string,
-    string,
-    unknown,
-    prismic.FieldState,
-    never
+  buttonLink1: prismic.Repeatable<
+    prismic.LinkField<string, string, unknown, prismic.FieldState, never>
   >;
 
   /**
@@ -446,15 +476,11 @@ export interface CallToActionSliceAlignLeftPrimary {
    *
    * - **Field Type**: Link
    * - **Placeholder**: *None*
-   * - **API ID Path**: call_to_action.alignLeft.primary.buttonlink2
+   * - **API ID Path**: call_to_action.alignLeft.primary.buttonLink2
    * - **Documentation**: https://prismic.io/docs/fields/link
    */
-  buttonlink2: prismic.LinkField<
-    string,
-    string,
-    unknown,
-    prismic.FieldState,
-    never
+  buttonLink2: prismic.Repeatable<
+    prismic.LinkField<string, string, unknown, prismic.FieldState, never>
   >;
 }
 
