@@ -199,6 +199,71 @@ export type MainpageDocument<Lang extends string = string> =
     Lang
   >;
 
+type ProjectdetailsDocumentDataSlicesSlice = ProjectTypesSlice;
+
+/**
+ * Content for ProjectDetails documents
+ */
+interface ProjectdetailsDocumentData {
+  /**
+   * Slice Zone field in *ProjectDetails*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: projectdetails.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/slices
+   */
+  slices: prismic.SliceZone<ProjectdetailsDocumentDataSlicesSlice> /**
+   * Meta Title field in *ProjectDetails*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: projectdetails.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */;
+  meta_title: prismic.KeyTextField;
+
+  /**
+   * Meta Description field in *ProjectDetails*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: projectdetails.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * Meta Image field in *ProjectDetails*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: projectdetails.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  meta_image: prismic.ImageField<never>;
+}
+
+/**
+ * ProjectDetails document from Prismic
+ *
+ * - **API ID**: `projectdetails`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/content-modeling
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type ProjectdetailsDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<
+    Simplify<ProjectdetailsDocumentData>,
+    "projectdetails",
+    Lang
+  >;
+
 type ResumeDocumentDataSlicesSlice = WorkBackgroundSlice;
 
 /**
@@ -267,6 +332,7 @@ export type ResumeDocument<Lang extends string = string> =
 export type AllDocumentTypes =
   | ContactDocument
   | MainpageDocument
+  | ProjectdetailsDocument
   | ResumeDocument;
 
 /**
@@ -621,6 +687,61 @@ type HeroSliceVariation = HeroSliceDefault;
 export type HeroSlice = prismic.SharedSlice<"hero", HeroSliceVariation>;
 
 /**
+ * Primary content in *ProjectTypes → Default → Primary*
+ */
+export interface ProjectTypesSliceDefaultPrimary {
+  /**
+   * Project Type field in *ProjectTypes → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: Title
+   * - **API ID Path**: project_types.default.primary.project_type
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  project_type: prismic.RichTextField;
+
+  /**
+   * Projects field in *ProjectTypes → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: My Projects
+   * - **API ID Path**: project_types.default.primary.projects
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  projects: prismic.RichTextField;
+}
+
+/**
+ * Default variation for ProjectTypes Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type ProjectTypesSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<ProjectTypesSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *ProjectTypes*
+ */
+type ProjectTypesSliceVariation = ProjectTypesSliceDefault;
+
+/**
+ * ProjectTypes Shared Slice
+ *
+ * - **API ID**: `project_types`
+ * - **Description**: ProjectTypes
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type ProjectTypesSlice = prismic.SharedSlice<
+  "project_types",
+  ProjectTypesSliceVariation
+>;
+
+/**
  * Primary content in *WorkBackground → Default → Primary*
  */
 export interface WorkBackgroundSliceDefaultPrimary {
@@ -734,6 +855,9 @@ declare module "@prismicio/client" {
       MainpageDocument,
       MainpageDocumentData,
       MainpageDocumentDataSlicesSlice,
+      ProjectdetailsDocument,
+      ProjectdetailsDocumentData,
+      ProjectdetailsDocumentDataSlicesSlice,
       ResumeDocument,
       ResumeDocumentData,
       ResumeDocumentDataSlicesSlice,
@@ -748,6 +872,10 @@ declare module "@prismicio/client" {
       HeroSliceDefaultPrimary,
       HeroSliceVariation,
       HeroSliceDefault,
+      ProjectTypesSlice,
+      ProjectTypesSliceDefaultPrimary,
+      ProjectTypesSliceVariation,
+      ProjectTypesSliceDefault,
       WorkBackgroundSlice,
       WorkBackgroundSliceDefaultPrimary,
       WorkBackgroundSliceVariation,

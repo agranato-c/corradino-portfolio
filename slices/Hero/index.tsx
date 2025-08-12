@@ -33,23 +33,23 @@ const Hero: FC<HeroProps> = ({ slice }) => {
                 {slice.primary.tagline}
               </p>
             )}
+
             {isFilled.richText(slice.primary.title) && (
               <div className="es-fullpage-hero__content__intro__headline">
                 <PrismicRichText field={slice.primary.title} />
               </div>
             )}
-            {isFilled.image(slice.primary.image) && (
-              <div className="es-fullpage-hero__image">
-                <PrismicNextImage
-                  field={slice.primary.image}
-                />
-              </div>
-            )}
+
             {isFilled.richText(slice.primary.description) && (
               <div className="es-fullpage-hero__content__intro__description">
                 <PrismicRichText field={slice.primary.description} />
               </div>
             )}
+
+            {isFilled.image(slice.primary.image) && (
+              <img alt="es-fullpage-hero__image" className="inline-flex es-fullpage-hero__image--custom-width" src={slice.primary.image.url ?? "#"} />
+            )}
+
             <PrismicNextLink
               className="es-call-to-action__link"
               field={slice.primary.callToActionLink1}
@@ -95,6 +95,10 @@ const Hero: FC<HeroProps> = ({ slice }) => {
 
           .es-fullpage-hero__image--right > div:nth-child(2) {
               order: 1;
+          }
+
+          .es-fullpage-hero__image--custom-width {
+              width: 500px;
           }
 
           .es-fullpage-hero__content {
