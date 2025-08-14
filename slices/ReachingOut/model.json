@@ -1,0 +1,77 @@
+{
+  "id": "reaching_out",
+  "type": "SharedSlice",
+  "name": "ReachingOut",
+  "description": "ReachingOut",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "firstname": {
+          "type": "Text",
+          "config": {
+            "label": "FirstName",
+            "placeholder": "First"
+          }
+        },
+        "lastname": {
+          "type": "Text",
+          "config": {
+            "label": "LastName",
+            "placeholder": "Last"
+          }
+        },
+        "email": {
+          "type": "Text",
+          "config": {
+            "label": "Email",
+            "placeholder": ""
+          }
+        },
+        "phone": {
+          "type": "Text",
+          "config": {
+            "label": "Phone",
+            "placeholder": ""
+          }
+        },
+        "companyname": {
+          "type": "Text",
+          "config": {
+            "label": "CompanyName",
+            "placeholder": ""
+          }
+        },
+        "submission": {
+          "type": "Boolean",
+          "config": {
+            "label": "Submission",
+            "placeholder_false": "false",
+            "placeholder_true": "true",
+            "default_value": false
+          }
+        },
+        "errormessage": {
+          "type": "Text",
+          "config": {
+            "label": "ErrorMessage",
+            "placeholder": "Incomplete!"
+          }
+        },
+        "completion": {
+          "type": "Text",
+          "config": {
+            "label": "Completion",
+            "placeholder": "Complete!"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

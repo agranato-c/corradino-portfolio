@@ -78,19 +78,6 @@
 					}
 				]
 			},
-			"making_contact": {
-				"__TYPE__": "BooleanContent",
-				"value": true
-			},
-			"submit": {
-				"__TYPE__": "BooleanContent",
-				"value": false
-			},
-			"ready_to_submit": {
-				"__TYPE__": "FieldContent",
-				"value": "here",
-				"type": "Text"
-			},
 			"projects": {
 				"__TYPE__": "GroupContentType",
 				"value": [
@@ -98,42 +85,9 @@
 						"__TYPE__": "GroupItemContent",
 						"value": [
 							[
-								"Modeling",
+								"items",
 								{
-									"key": "fe37b53c-2963-40da-bfc9-330f27f00df3",
-									"__TYPE__": "LinkContent",
-									"value": {
-										"__TYPE__": "DocumentLink",
-										"id": "mock_document_id"
-									}
-								}
-							],
-							[
-								"planning",
-								{
-									"key": "99465445-a588-464d-8d1e-db09283cc1f3",
-									"__TYPE__": "LinkContent",
-									"value": {
-										"__TYPE__": "DocumentLink",
-										"id": "mock_document_id"
-									}
-								}
-							],
-							[
-								"datainnovation",
-								{
-									"key": "511f1ab2-a3f1-4558-a84f-b27e7c16beb1",
-									"__TYPE__": "LinkContent",
-									"value": {
-										"__TYPE__": "DocumentLink",
-										"id": "mock_document_id"
-									}
-								}
-							],
-							[
-								"other",
-								{
-									"key": "06969c59-dfce-4725-9cc0-f1b63fb88a2d",
+									"key": "468d47f0-8803-4af3-bfbd-1524607f6b84",
 									"__TYPE__": "LinkContent",
 									"value": {
 										"__TYPE__": "DocumentLink",
@@ -144,6 +98,14 @@
 						]
 					}
 				]
+			},
+			"resumetopics": {
+				"key": "d256d44b-29a7-4f89-98b9-ce98ce8e7f93",
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "DocumentLink",
+					"id": "mock_document_id"
+				}
 			}
 		},
 		"items": []
@@ -201,24 +163,6 @@
 					}
 				]
 			},
-			"project_type": {
-				"__TYPE__": "FieldContent",
-				"value": "Modeling",
-				"type": "Select"
-			},
-			"making_contact": {
-				"__TYPE__": "BooleanContent",
-				"value": false
-			},
-			"submit": {
-				"__TYPE__": "BooleanContent",
-				"value": true
-			},
-			"ready_to_submit": {
-				"__TYPE__": "FieldContent",
-				"value": "supply",
-				"type": "Text"
-			},
 			"buttonLink1": {
 				"__TYPE__": "RepeatableContent",
 				"type": "Link",
@@ -248,6 +192,35 @@
 						}
 					}
 				]
+			},
+			"projects": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"items",
+								{
+									"key": "79a50baf-ac7a-4310-a555-adcea483e5d1",
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "DocumentLink",
+										"id": "mock_document_id"
+									}
+								}
+							]
+						]
+					}
+				]
+			},
+			"resumetopics": {
+				"key": "24ed6169-6caf-46af-a829-dd9788119aa9",
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "DocumentLink",
+					"id": "mock_document_id"
+				}
 			}
 		},
 		"items": []

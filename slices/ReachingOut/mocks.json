@@ -1,0 +1,48 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"firstname": {
+				"__TYPE__": "FieldContent",
+				"value": "enter",
+				"type": "Text"
+			},
+			"lastname": {
+				"__TYPE__": "FieldContent",
+				"value": "fewer",
+				"type": "Text"
+			},
+			"email": {
+				"__TYPE__": "FieldContent",
+				"value": "verb",
+				"type": "Text"
+			},
+			"phone": {
+				"__TYPE__": "FieldContent",
+				"value": "fill",
+				"type": "Text"
+			},
+			"companyname": {
+				"__TYPE__": "FieldContent",
+				"value": "wolf",
+				"type": "Text"
+			},
+			"submission": {
+				"__TYPE__": "BooleanContent",
+				"value": true
+			},
+			"errormessage": {
+				"__TYPE__": "FieldContent",
+				"value": "neck",
+				"type": "Text"
+			},
+			"completion": {
+				"__TYPE__": "FieldContent",
+				"value": "joined",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]

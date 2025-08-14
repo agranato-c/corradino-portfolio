@@ -6,5 +6,6 @@ export const components = {
   call_to_action: dynamic(() => import("./CallToAction")),
   hero: dynamic(() => import("./Hero")),
   project_types: dynamic(() => import("./ProjectTypes")),
+  reaching_out: dynamic(() => import("./ReachingOut")),
   work_background: dynamic(() => import("./WorkBackground")),
 };

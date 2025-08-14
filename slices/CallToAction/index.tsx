@@ -7,7 +7,7 @@ export type CallToActionProps = SliceComponentProps<Content.CallToActionSlice>;
 
 const CallToAction: FC<CallToActionProps> = ({ slice }) => {
   const alignment = slice.variation === "alignLeft" ? "left" : "center";
-
+console.log("slices", slice.primary.projects)
   return (
     <section
       data-slice-type={slice.slice_type}
@@ -34,22 +34,7 @@ const CallToAction: FC<CallToActionProps> = ({ slice }) => {
             </div>
           )}
         </div>
-        {slice.primary.making_contact && (
-          <div className="es-call-to-action__content__making-contact">
-            {slice.primary.making_contact}
-          </div>
-        )}
 
-        {slice.primary.submit && (
-          <div className="es-call-to-action__content__submit">
-            {slice.primary.submit}
-          </div>
-        )}
-        {slice.primary.ready_to_submit && (
-          <div className="es-call-to-action__content__ready-to-submit">
-            {slice.primary.ready_to_submit}
-          </div>
-        )}
         {slice.primary.buttonLink1.map((link) => (
           <PrismicNextLink
             key={link.key}
@@ -62,18 +47,26 @@ const CallToAction: FC<CallToActionProps> = ({ slice }) => {
             field={link}
           />
         ))}
-        {/* {Array.isArray(slice.primary.buttonLink1) && slice.primary.buttonLink1[0] && (
-          <PrismicNextLink
-            className="es-call-to-action__button"
-            field={slice.primary.buttonLink1[0]}
-          />
-        )}
-        {Array.isArray(slice.primary.buttonLink2) && slice.primary.buttonLink2[0] && (
-          <PrismicNextLink
-            className="es-call-to-action__button"
-            field={slice.primary.buttonLink2[0]}
-          />
-        )} */}
+
+        {slice.primary.projects.map((item) => {
+          // Type guard to check if 'project' exists on item and is an object with 'id'
+          if (
+            "project" in item &&
+            isFilled.contentRelationship((item as any).project) &&
+            typeof (item as any).project === "object" &&
+            "id" in (item as any).project
+          ) {
+            const project = (item as { project: { id: string } }).project;
+            return (
+              <div
+                key={project.id}
+                id={project.id}
+              >
+              </div>
+            );
+          }
+          return null;
+        })}
       </div>
 
       <style>

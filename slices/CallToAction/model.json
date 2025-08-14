@@ -38,31 +38,6 @@
             "multi": "paragraph,preformatted,strong,hyperlink,image,embed,list-item,o-list-item,rtl"
           }
         },
-        "making_contact": {
-          "type": "Boolean",
-          "config": {
-            "label": "Making Contact",
-            "placeholder_false": "false",
-            "placeholder_true": "true",
-            "default_value": false
-          }
-        },
-        "submit": {
-          "type": "Boolean",
-          "config": {
-            "label": "Submit",
-            "placeholder_false": "false",
-            "placeholder_true": "true",
-            "default_value": false
-          }
-        },
-        "ready_to_submit": {
-          "type": "Text",
-          "config": {
-            "label": "Ready to Submit",
-            "placeholder": ""
-          }
-        },
         "buttonLink1": {
           "type": "Link",
           "config": {
@@ -91,10 +66,10 @@
             "label": "Projects",
             "repeat": true,
             "fields": {
-              "Modeling": {
+              "items": {
                 "type": "Link",
                 "config": {
-                  "label": "Modeling",
+                  "label": "Items",
                   "select": "document",
                   "repeat": false,
                   "customtypes": [
@@ -108,35 +83,19 @@
                     }
                   ]
                 }
-              },
-              "planning": {
-                "type": "Link",
-                "config": {
-                  "label": "Planning",
-                  "select": "document",
-                  "repeat": false,
-                  "customtypes": []
-                }
-              },
-              "datainnovation": {
-                "type": "Link",
-                "config": {
-                  "label": "DataInnovation",
-                  "select": "document",
-                  "repeat": false,
-                  "customtypes": []
-                }
-              },
-              "other": {
-                "type": "Link",
-                "config": {
-                  "label": "Other",
-                  "select": "document",
-                  "repeat": false,
-                  "customtypes": []
-                }
               }
             }
+          }
+        },
+        "resumetopics": {
+          "type": "Link",
+          "config": {
+            "label": "ResumeTopics",
+            "select": "document",
+            "repeat": false,
+            "customtypes": [
+              "projectdetails"
+            ]
           }
         }
       },
@@ -176,44 +135,6 @@
             "single": "paragraph,preformatted,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
           }
         },
-        "project_type": {
-          "type": "Select",
-          "config": {
-            "label": "Project Type",
-            "placeholder": "",
-            "options": [
-              "Modeling",
-              "Planning",
-              "D&I",
-              "Other"
-            ]
-          }
-        },
-        "making_contact": {
-          "type": "Boolean",
-          "config": {
-            "label": "Making Contact",
-            "placeholder_false": "false",
-            "placeholder_true": "true",
-            "default_value": false
-          }
-        },
-        "submit": {
-          "type": "Boolean",
-          "config": {
-            "label": "Submit",
-            "placeholder_false": "false",
-            "placeholder_true": "true",
-            "default_value": false
-          }
-        },
-        "ready_to_submit": {
-          "type": "Text",
-          "config": {
-            "label": "Ready to Submit",
-            "placeholder": ""
-          }
-        },
         "buttonLink1": {
           "type": "Link",
           "config": {
@@ -234,6 +155,35 @@
             "allowTargetBlank": true,
             "allowText": true,
             "repeat": true
+          }
+        },
+        "projects": {
+          "type": "Group",
+          "config": {
+            "label": "Projects",
+            "repeat": true,
+            "fields": {
+              "items": {
+                "type": "Link",
+                "config": {
+                  "label": "Items",
+                  "select": "document",
+                  "repeat": false,
+                  "customtypes": []
+                }
+              }
+            }
+          }
+        },
+        "resumetopics": {
+          "type": "Link",
+          "config": {
+            "label": "ResumeTopics",
+            "select": "document",
+            "repeat": false,
+            "customtypes": [
+              "contactinformation"
+            ]
           }
         }
       },

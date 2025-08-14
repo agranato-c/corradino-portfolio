@@ -134,6 +134,71 @@ export type ContactDocument<Lang extends string = string> =
     Lang
   >;
 
+type ContactinformationDocumentDataSlicesSlice = ReachingOutSlice;
+
+/**
+ * Content for ContactInformation documents
+ */
+interface ContactinformationDocumentData {
+  /**
+   * Slice Zone field in *ContactInformation*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contactinformation.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/slices
+   */
+  slices: prismic.SliceZone<ContactinformationDocumentDataSlicesSlice> /**
+   * Meta Title field in *ContactInformation*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: contactinformation.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */;
+  meta_title: prismic.KeyTextField;
+
+  /**
+   * Meta Description field in *ContactInformation*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: contactinformation.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * Meta Image field in *ContactInformation*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contactinformation.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  meta_image: prismic.ImageField<never>;
+}
+
+/**
+ * ContactInformation document from Prismic
+ *
+ * - **API ID**: `contactinformation`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/content-modeling
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type ContactinformationDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<
+    Simplify<ContactinformationDocumentData>,
+    "contactinformation",
+    Lang
+  >;
+
 type MainpageDocumentDataSlicesSlice = HeroSlice;
 
 /**
@@ -331,6 +396,7 @@ export type ResumeDocument<Lang extends string = string> =
 
 export type AllDocumentTypes =
   | ContactDocument
+  | ContactinformationDocument
   | MainpageDocument
   | ProjectdetailsDocument
   | ResumeDocument;
@@ -340,14 +406,14 @@ export type AllDocumentTypes =
  */
 export interface CallToActionSliceDefaultPrimaryProjectsItem {
   /**
-   * Modeling field in *CallToAction → Default → Primary → Projects*
+   * Items field in *CallToAction → Default → Primary → Projects*
    *
    * - **Field Type**: Content Relationship
    * - **Placeholder**: *None*
-   * - **API ID Path**: call_to_action.default.primary.projects[].Modeling
+   * - **API ID Path**: call_to_action.default.primary.projects[].items
    * - **Documentation**: https://prismic.io/docs/fields/content-relationship
    */
-  Modeling: ContentRelationshipFieldWithData<
+  items: ContentRelationshipFieldWithData<
     [
       {
         id: "projectdetails";
@@ -355,36 +421,21 @@ export interface CallToActionSliceDefaultPrimaryProjectsItem {
       },
     ]
   >;
+}
 
+/**
+ * Item in *CallToAction → AlignLeft → Primary → Projects*
+ */
+export interface CallToActionSliceAlignLeftPrimaryProjectsItem {
   /**
-   * Planning field in *CallToAction → Default → Primary → Projects*
+   * Items field in *CallToAction → AlignLeft → Primary → Projects*
    *
    * - **Field Type**: Content Relationship
    * - **Placeholder**: *None*
-   * - **API ID Path**: call_to_action.default.primary.projects[].planning
+   * - **API ID Path**: call_to_action.alignLeft.primary.projects[].items
    * - **Documentation**: https://prismic.io/docs/fields/content-relationship
    */
-  planning: prismic.ContentRelationshipField;
-
-  /**
-   * DataInnovation field in *CallToAction → Default → Primary → Projects*
-   *
-   * - **Field Type**: Content Relationship
-   * - **Placeholder**: *None*
-   * - **API ID Path**: call_to_action.default.primary.projects[].datainnovation
-   * - **Documentation**: https://prismic.io/docs/fields/content-relationship
-   */
-  datainnovation: prismic.ContentRelationshipField;
-
-  /**
-   * Other field in *CallToAction → Default → Primary → Projects*
-   *
-   * - **Field Type**: Content Relationship
-   * - **Placeholder**: *None*
-   * - **API ID Path**: call_to_action.default.primary.projects[].other
-   * - **Documentation**: https://prismic.io/docs/fields/content-relationship
-   */
-  other: prismic.ContentRelationshipField;
+  items: prismic.ContentRelationshipField;
 }
 
 /**
@@ -422,38 +473,6 @@ export interface CallToActionSliceDefaultPrimary {
   paragraph: prismic.RichTextField;
 
   /**
-   * Making Contact field in *CallToAction → Default → Primary*
-   *
-   * - **Field Type**: Boolean
-   * - **Placeholder**: *None*
-   * - **Default Value**: false
-   * - **API ID Path**: call_to_action.default.primary.making_contact
-   * - **Documentation**: https://prismic.io/docs/fields/boolean
-   */
-  making_contact: prismic.BooleanField;
-
-  /**
-   * Submit field in *CallToAction → Default → Primary*
-   *
-   * - **Field Type**: Boolean
-   * - **Placeholder**: *None*
-   * - **Default Value**: false
-   * - **API ID Path**: call_to_action.default.primary.submit
-   * - **Documentation**: https://prismic.io/docs/fields/boolean
-   */
-  submit: prismic.BooleanField;
-
-  /**
-   * Ready to Submit field in *CallToAction → Default → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: call_to_action.default.primary.ready_to_submit
-   * - **Documentation**: https://prismic.io/docs/fields/text
-   */
-  ready_to_submit: prismic.KeyTextField;
-
-  /**
    * buttonLink1 field in *CallToAction → Default → Primary*
    *
    * - **Field Type**: Link
@@ -488,6 +507,16 @@ export interface CallToActionSliceDefaultPrimary {
   projects: prismic.GroupField<
     Simplify<CallToActionSliceDefaultPrimaryProjectsItem>
   >;
+
+  /**
+   * ResumeTopics field in *CallToAction → Default → Primary*
+   *
+   * - **Field Type**: Content Relationship
+   * - **Placeholder**: *None*
+   * - **API ID Path**: call_to_action.default.primary.resumetopics
+   * - **Documentation**: https://prismic.io/docs/fields/content-relationship
+   */
+  resumetopics: prismic.ContentRelationshipField<"projectdetails">;
 }
 
 /**
@@ -538,48 +567,6 @@ export interface CallToActionSliceAlignLeftPrimary {
   paragraph: prismic.RichTextField;
 
   /**
-   * Project Type field in *CallToAction → AlignLeft → Primary*
-   *
-   * - **Field Type**: Select
-   * - **Placeholder**: *None*
-   * - **API ID Path**: call_to_action.alignLeft.primary.project_type
-   * - **Documentation**: https://prismic.io/docs/fields/select
-   */
-  project_type: prismic.SelectField<"Modeling" | "Planning" | "D&I" | "Other">;
-
-  /**
-   * Making Contact field in *CallToAction → AlignLeft → Primary*
-   *
-   * - **Field Type**: Boolean
-   * - **Placeholder**: *None*
-   * - **Default Value**: false
-   * - **API ID Path**: call_to_action.alignLeft.primary.making_contact
-   * - **Documentation**: https://prismic.io/docs/fields/boolean
-   */
-  making_contact: prismic.BooleanField;
-
-  /**
-   * Submit field in *CallToAction → AlignLeft → Primary*
-   *
-   * - **Field Type**: Boolean
-   * - **Placeholder**: *None*
-   * - **Default Value**: false
-   * - **API ID Path**: call_to_action.alignLeft.primary.submit
-   * - **Documentation**: https://prismic.io/docs/fields/boolean
-   */
-  submit: prismic.BooleanField;
-
-  /**
-   * Ready to Submit field in *CallToAction → AlignLeft → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: call_to_action.alignLeft.primary.ready_to_submit
-   * - **Documentation**: https://prismic.io/docs/fields/text
-   */
-  ready_to_submit: prismic.KeyTextField;
-
-  /**
    * buttonLink1 field in *CallToAction → AlignLeft → Primary*
    *
    * - **Field Type**: Link
@@ -602,6 +589,28 @@ export interface CallToActionSliceAlignLeftPrimary {
   buttonLink2: prismic.Repeatable<
     prismic.LinkField<string, string, unknown, prismic.FieldState, never>
   >;
+
+  /**
+   * Projects field in *CallToAction → AlignLeft → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: call_to_action.alignLeft.primary.projects[]
+   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
+   */
+  projects: prismic.GroupField<
+    Simplify<CallToActionSliceAlignLeftPrimaryProjectsItem>
+  >;
+
+  /**
+   * ResumeTopics field in *CallToAction → AlignLeft → Primary*
+   *
+   * - **Field Type**: Content Relationship
+   * - **Placeholder**: *None*
+   * - **API ID Path**: call_to_action.alignLeft.primary.resumetopics
+   * - **Documentation**: https://prismic.io/docs/fields/content-relationship
+   */
+  resumetopics: prismic.ContentRelationshipField<"contactinformation">;
 }
 
 /**
@@ -796,6 +805,122 @@ export type ProjectTypesSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Primary content in *ReachingOut → Default → Primary*
+ */
+export interface ReachingOutSliceDefaultPrimary {
+  /**
+   * FirstName field in *ReachingOut → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: First
+   * - **API ID Path**: reaching_out.default.primary.firstname
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  firstname: prismic.KeyTextField;
+
+  /**
+   * LastName field in *ReachingOut → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Last
+   * - **API ID Path**: reaching_out.default.primary.lastname
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  lastname: prismic.KeyTextField;
+
+  /**
+   * Email field in *ReachingOut → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: reaching_out.default.primary.email
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  email: prismic.KeyTextField;
+
+  /**
+   * Phone field in *ReachingOut → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: reaching_out.default.primary.phone
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  phone: prismic.KeyTextField;
+
+  /**
+   * CompanyName field in *ReachingOut → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: reaching_out.default.primary.companyname
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  companyname: prismic.KeyTextField;
+
+  /**
+   * Submission field in *ReachingOut → Default → Primary*
+   *
+   * - **Field Type**: Boolean
+   * - **Placeholder**: *None*
+   * - **Default Value**: false
+   * - **API ID Path**: reaching_out.default.primary.submission
+   * - **Documentation**: https://prismic.io/docs/fields/boolean
+   */
+  submission: prismic.BooleanField;
+
+  /**
+   * ErrorMessage field in *ReachingOut → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Incomplete!
+   * - **API ID Path**: reaching_out.default.primary.errormessage
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  errormessage: prismic.KeyTextField;
+
+  /**
+   * Completion field in *ReachingOut → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: Complete!
+   * - **API ID Path**: reaching_out.default.primary.completion
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  completion: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for ReachingOut Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type ReachingOutSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<ReachingOutSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *ReachingOut*
+ */
+type ReachingOutSliceVariation = ReachingOutSliceDefault;
+
+/**
+ * ReachingOut Shared Slice
+ *
+ * - **API ID**: `reaching_out`
+ * - **Description**: ReachingOut
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type ReachingOutSlice = prismic.SharedSlice<
+  "reaching_out",
+  ReachingOutSliceVariation
+>;
+
+/**
  * Primary content in *WorkBackground → Default → Primary*
  */
 export interface WorkBackgroundSliceDefaultPrimary {
@@ -926,6 +1051,9 @@ declare module "@prismicio/client" {
       ContactDocument,
       ContactDocumentData,
       ContactDocumentDataSlicesSlice,
+      ContactinformationDocument,
+      ContactinformationDocumentData,
+      ContactinformationDocumentDataSlicesSlice,
       MainpageDocument,
       MainpageDocumentData,
       MainpageDocumentDataSlicesSlice,
@@ -939,6 +1067,7 @@ declare module "@prismicio/client" {
       CallToActionSlice,
       CallToActionSliceDefaultPrimaryProjectsItem,
       CallToActionSliceDefaultPrimary,
+      CallToActionSliceAlignLeftPrimaryProjectsItem,
       CallToActionSliceAlignLeftPrimary,
       CallToActionSliceVariation,
       CallToActionSliceDefault,
@@ -951,6 +1080,10 @@ declare module "@prismicio/client" {
       ProjectTypesSliceDefaultPrimary,
       ProjectTypesSliceVariation,
       ProjectTypesSliceDefault,
+      ReachingOutSlice,
+      ReachingOutSliceDefaultPrimary,
+      ReachingOutSliceVariation,
+      ReachingOutSliceDefault,
       WorkBackgroundSlice,
       WorkBackgroundSliceDefaultPrimary,
       WorkBackgroundSliceVariation,
