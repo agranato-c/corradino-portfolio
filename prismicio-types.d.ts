@@ -69,7 +69,10 @@ type ContentRelationshipFieldWithData<
   >;
 }[Exclude<TCustomType[number], string>["id"]];
 
-type ContactDocumentDataSlicesSlice = ProjectTypesSlice | CallToActionSlice;
+type ContactDocumentDataSlicesSlice =
+  | ReachingOutSlice
+  | ProjectTypesSlice
+  | CallToActionSlice;
 
 /**
  * Content for Contact documents
@@ -329,6 +332,71 @@ export type ProjectdetailsDocument<Lang extends string = string> =
     Lang
   >;
 
+type ReachingmeDocumentDataSlicesSlice = ReachingOutSlice;
+
+/**
+ * Content for ReachingMe documents
+ */
+interface ReachingmeDocumentData {
+  /**
+   * Slice Zone field in *ReachingMe*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: reachingme.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/slices
+   */
+  slices: prismic.SliceZone<ReachingmeDocumentDataSlicesSlice> /**
+   * Meta Title field in *ReachingMe*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: reachingme.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */;
+  meta_title: prismic.KeyTextField;
+
+  /**
+   * Meta Description field in *ReachingMe*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: reachingme.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * Meta Image field in *ReachingMe*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: reachingme.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  meta_image: prismic.ImageField<never>;
+}
+
+/**
+ * ReachingMe document from Prismic
+ *
+ * - **API ID**: `reachingme`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/content-modeling
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type ReachingmeDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<
+    Simplify<ReachingmeDocumentData>,
+    "reachingme",
+    Lang
+  >;
+
 type ResumeDocumentDataSlicesSlice = WorkBackgroundSlice;
 
 /**
@@ -399,6 +467,7 @@ export type AllDocumentTypes =
   | ContactinformationDocument
   | MainpageDocument
   | ProjectdetailsDocument
+  | ReachingmeDocument
   | ResumeDocument;
 
 /**
@@ -1070,6 +1139,9 @@ declare module "@prismicio/client" {
       ProjectdetailsDocument,
       ProjectdetailsDocumentData,
       ProjectdetailsDocumentDataSlicesSlice,
+      ReachingmeDocument,
+      ReachingmeDocumentData,
+      ReachingmeDocumentDataSlicesSlice,
       ResumeDocument,
       ResumeDocumentData,
       ResumeDocumentDataSlicesSlice,

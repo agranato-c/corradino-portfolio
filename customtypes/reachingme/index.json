@@ -1,7 +1,7 @@
 {
   "format": "page",
-  "id": "contact",
-  "label": "Contact",
+  "id": "reachingme",
+  "label": "ReachingMe",
   "repeatable": false,
   "status": true,
   "json": {
@@ -12,12 +12,6 @@
         "config": {
           "choices": {
             "reaching_out": {
-              "type": "SharedSlice"
-            },
-            "project_types": {
-              "type": "SharedSlice"
-            },
-            "call_to_action": {
               "type": "SharedSlice"
             }
           }
