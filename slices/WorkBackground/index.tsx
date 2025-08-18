@@ -2,6 +2,8 @@ import { FC } from "react";
 import { Content } from "@prismicio/client";
 import { SliceComponentProps, PrismicRichText } from "@prismicio/react";
 import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
+import { Bounded } from "../../app/components/Bounded";
+import { ButtonLink } from "../../app/components/ButtonLink";
 
 /**
  * Props for `WorkBackground`.
@@ -14,26 +16,41 @@ export type WorkBackgroundProps =
  */
 const WorkBackground: FC<WorkBackgroundProps> = ({ slice }) => {
   return (
-    <section
+    <Bounded
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
 
-    <PrismicNextImage field={slice.primary.image} />
+    <div className="absolute">
+      <PrismicNextImage
+        field={slice.primary.image}
+        alt = ""
+        priority
+        fill
+        className = "object-cover"
+      />
+    </div>
 
-    <PrismicRichText field={slice.primary.label} />
+    <div className="relative flex h-screen flex-col justify-center">
 
-    <PrismicRichText field={slice.primary.education} />
+      <div className="max-w-xl text-6xl leading-tight text-neutral-50 md:text-2xl lg:text-4xl">
+        <PrismicRichText field={slice.primary.label} />
+      </div>
 
-    <PrismicNextLink
-      field={slice.primary.engineering_resume}
-    />
+      <div className="mt-6 max-w-md text-lg text-neutral-100">  
+        <PrismicRichText field={slice.primary.education} />
+      </div>
 
-    <PrismicNextLink field={slice.primary.calltoactionlink1} />
+        <ButtonLink field={slice.primary.calltoactionlink1} />
 
-    <PrismicNextLink field={slice.primary.calltoactionlink2} />
+        <ButtonLink field={slice.primary.calltoactionlink2} />
 
-    </section>
+        <ButtonLink
+          field={slice.primary.engineering_resume} />
+
+    </div>
+
+    </Bounded>
   );
 };
 

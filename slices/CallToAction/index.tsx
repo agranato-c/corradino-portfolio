@@ -2,6 +2,7 @@ import { FC } from "react";
 import { Content, isFilled } from "@prismicio/client";
 import { SliceComponentProps, PrismicRichText } from "@prismicio/react";
 import { PrismicNextLink, PrismicNextImage } from "@prismicio/next";
+import { ButtonLink } from "../../app/components/ButtonLink";
 
 export type CallToActionProps = SliceComponentProps<Content.CallToActionSlice>;
 
@@ -36,37 +37,33 @@ console.log("slices", slice.primary.projects)
         </div>
 
         {slice.primary.buttonLink1.map((link) => (
-          <PrismicNextLink
+          <ButtonLink
             key={link.key}
             field={link}
           />
         ))}
         {slice.primary.buttonLink2.map((link) => (
-          <PrismicNextLink
+          <ButtonLink
             key={link.key}
             field={link}
           />
         ))}
 
+        {/* const fragrance = await client.getByID<ProjectsDocument>(id);
         {slice.primary.projects.map((item) => {
           // Type guard to check if 'project' exists on item and is an object with 'id'
-          if (
-            "project" in item &&
-            isFilled.contentRelationship((item as any).project) &&
-            typeof (item as any).project === "object" &&
-            "id" in (item as any).project
-          ) {
-            const project = (item as { project: { id: string } }).project;
+            if (isFilled.contentRelationship(item.projects)) {
+
             return (
               <div
-                key={project.id}
-                id={project.id}
+                key={item.projects.id}
+                id={item.projects.id}
               >
               </div>
             );
           }
           return null;
-        })}
+        })} */}
       </div>
 
       <style>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
 import { PrismicPreview } from "@prismicio/next";
@@ -26,13 +27,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-        <PrismicPreview repositoryName={repositoryName} />
+    <html
+      lang="en"
+      className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+    >
+
+      <body className="bg-neutral-900 text-white">
+        <main className="pt-14 md:mp-16">{children}</main>
       </body>
+      <PrismicPreview repositoryName={repositoryName} />
     </html>
   );
 }

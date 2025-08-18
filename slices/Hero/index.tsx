@@ -2,12 +2,13 @@ import { FC } from "react";
 import { Content, isFilled } from "@prismicio/client";
 import { SliceComponentProps, PrismicRichText } from "@prismicio/react";
 import { PrismicNextLink, PrismicNextImage } from "@prismicio/next";
-
+import { Bounded } from "../../app/components/Bounded";
+import { ButtonLink } from "../../app/components/ButtonLink";
 export type HeroProps = SliceComponentProps<Content.HeroSlice>;
 
 const Hero: FC<HeroProps> = ({ slice }) => {
   return (
-    <section
+    <Bounded
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
       className="es-bounded es-fullpage-hero"
@@ -22,6 +23,8 @@ const Hero: FC<HeroProps> = ({ slice }) => {
             <PrismicNextImage
               field={slice.primary.image}
               className="es-fullpage-hero__image"
+              alt="" priority fill
+              className="object-cover"
             />
           )}
         </div> */}
@@ -50,11 +53,11 @@ const Hero: FC<HeroProps> = ({ slice }) => {
               <img alt="es-fullpage-hero__image" className="inline-flex es-fullpage-hero__image--custom-width" src={slice.primary.image.url ?? "#"} />
             )}
 
-            <PrismicNextLink
+            <ButtonLink
               className="es-call-to-action__link"
               field={slice.primary.callToActionLink1}
             />
-            <PrismicNextLink
+            <ButtonLink
               className="es-call-to-action__link"
               field={slice.primary.callToActionLink2}
             />
@@ -194,7 +197,7 @@ const Hero: FC<HeroProps> = ({ slice }) => {
           }
       `}
       </style>
-    </section>
+    </Bounded>
   );
 };
 

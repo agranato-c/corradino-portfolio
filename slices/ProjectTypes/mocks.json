@@ -24,6 +24,14 @@
 						}
 					}
 				]
+			},
+			"projecttype": {
+				"__TYPE__": "LinkContent",
+				"key": "f77b075b-5033-4f42-8015-a9339bfd736e",
+				"value": {
+					"__TYPE__": "DocumentLink",
+					"id": "mock_document_id"
+				}
 			}
 		},
 		"items": []

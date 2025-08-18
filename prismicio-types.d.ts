@@ -69,7 +69,7 @@ type ContentRelationshipFieldWithData<
   >;
 }[Exclude<TCustomType[number], string>["id"]];
 
-type ContactDocumentDataSlicesSlice = CallToActionSlice;
+type ContactDocumentDataSlicesSlice = ProjectTypesSlice | CallToActionSlice;
 
 /**
  * Content for Contact documents
@@ -772,6 +772,16 @@ export interface ProjectTypesSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/fields/rich-text
    */
   projects: prismic.RichTextField;
+
+  /**
+   * ProjectType field in *ProjectTypes → Default → Primary*
+   *
+   * - **Field Type**: Content Relationship
+   * - **Placeholder**: *None*
+   * - **API ID Path**: project_types.default.primary.projecttype
+   * - **Documentation**: https://prismic.io/docs/fields/content-relationship
+   */
+  projecttype: prismic.ContentRelationshipField<"projectdetails">;
 }
 
 /**
