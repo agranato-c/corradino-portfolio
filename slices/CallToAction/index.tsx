@@ -3,6 +3,7 @@ import { Content, isFilled } from "@prismicio/client";
 import { SliceComponentProps, PrismicRichText } from "@prismicio/react";
 import { PrismicNextLink, PrismicNextImage } from "@prismicio/next";
 import { ButtonLink } from "../../app/components/ButtonLink";
+import { Bounded } from "@/app/components/Bounded";
 
 export type CallToActionProps = SliceComponentProps<Content.CallToActionSlice>;
 
@@ -10,10 +11,10 @@ const CallToAction: FC<CallToActionProps> = ({ slice }) => {
   const alignment = slice.variation === "alignLeft" ? "left" : "center";
 console.log("slices", slice.primary.projects)
   return (
-    <section
+    <Bounded
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="es-bounded es-call-to-action"
+      className="es-bounded es-call-to-action overflow-hidden bg-black py-16 text-white md:py-24"
     >
       <div className="es-bounded__content es-call-to-action__content">
         {isFilled.image(slice.primary.image) && (
@@ -48,6 +49,8 @@ console.log("slices", slice.primary.projects)
             field={link}
           />
         ))}
+
+
 
         {/* const fragrance = await client.getByID<ProjectsDocument>(id);
         {slice.primary.projects.map((item) => {
@@ -148,7 +151,7 @@ console.log("slices", slice.primary.projects)
           }
         `}
       </style>
-    </section>
+    </Bounded>
   );
 };
 
