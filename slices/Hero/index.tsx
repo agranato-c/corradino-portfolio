@@ -11,23 +11,22 @@ const Hero: FC<HeroProps> = ({ slice }) => {
     <Bounded
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="es-bounded es-fullpage-hero"
+      // className="es-bounded es-fullpage-hero relative overflow-hidden bg-[url('/Transportation Systems.png')] bg-cover bg-center text-gray-50 md:py-28"
     >
       <div
         className={`
           
         `}
       >
-        {/* <div>
+        <div>
           {isFilled.image(slice.primary.image) && (
             <PrismicNextImage
-              field={slice.primary.image}
-              className="es-fullpage-hero__image"
+              field={slice.primary.background}
+              className="es-fullpage-hero__image relative overflow-hidden bg-cover bg-center text-gray-50 md:py-28"
               alt="" priority fill
-              className="object-cover"
             />
           )}
-        </div> */}
+        </div>
 
         <div className="es-fullpage-hero__content-right">
           <div className="es-fullpage-hero__content__intro">
