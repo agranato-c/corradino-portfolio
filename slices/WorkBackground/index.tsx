@@ -41,9 +41,9 @@ const WorkBackground: FC<WorkBackgroundProps> = ({ slice }) => {
         <PrismicRichText field={slice.primary.education} />
       </div>
 
-        <ButtonLink field={slice.primary.engineering_resume} />
+        <ButtonLink className="rounded-md inline-flex items-center justify-center whitespace-nowrap text-sm font-extrabold ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 uppercase text-primary bg-background hover:bg-primary hover:text-primary-foreground dark:bg-white dark:text-primary dark:hover:bg-primary dark:hover:text-black h-10 px-4 py-2 border border-primary" field={slice.primary.engineering_resume}  />
 
-        <ButtonLink field={slice.primary.calltoactionlink1} />
+        <ButtonLink className = "rounded-md h-10 px-4 py-2 border border-primary" field={slice.primary.calltoactionlink1} />
 
         <ButtonLink field={slice.primary.calltoactionlink2} />
 

@@ -39,7 +39,7 @@ const Hero: FC<HeroProps> = ({ slice }) => {
             <Bounded
               data-slice-type={slice.slice_type}
               data-slice-variation={slice.variation}
-              className="my-6 rounded-lg border-2 border-dashed bg-gray-100 p-2 dark:border-gray-200 dark:bg-muted  space-y-8 text-left border-color: rgb(2, 80, 150)">
+              className="my-6 rounded-lg border-2 border-dashed bg-gray-100 p-2 dark:border-gray-200 dark:bg-muted max-w-150 space-y-8 text-left border-color: rgb(2, 80, 150)">
             
                 {isFilled.keyText(slice.primary.tagline) && (
                   <p className="es-fullpage-hero__content__intro__eyebrow">
@@ -55,7 +55,7 @@ const Hero: FC<HeroProps> = ({ slice }) => {
             </Bounded>
 
             {isFilled.image(slice.primary.image) && (
-              <img alt="es-fullpage-hero__image" className="inline-flex es-fullpage-hero__image--custom-width" src={slice.primary.image.url ?? "#"} />
+              <img alt="es-fullpage-hero__image" className="inline-flex es-fullpage-hero__image--custom-width " src={slice.primary.image.url ?? "#"} />
             )}
 
             <ButtonLink

@@ -12,14 +12,14 @@ export const Footer = () => {
         {/* Bottom footer */}
         <div className="mt-16 flex flex-col items-center justify-between gap-6 border-t border-neutral-800 pt-8 md:flex-row">
           <p className="text-center text-sm text-gray-400">
-            © {new Date().getFullYear()} The Corradion Group. All rights reserved
+            © {new Date().getFullYear()} The Corradino Group. All rights reserved
           </p>
           <TransitionLink
             href="/"
             aria-label="Corradino"
             className="order-first md:order-none"
           >
-            <Image src="../app/Images and resumes/TCG_#2.png" alt="Corradino" width={150} height={25} />
+            <img src="../app/Images and resumes/TCG_#2.png" alt="Corradino" width={150} height={25} />
           </TransitionLink>
           <ul
             aria-label="Legal"

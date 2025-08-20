@@ -13,7 +13,7 @@ export const Bounded = forwardRef<HTMLElement, BoundedProps>(
       <Comp
         ref={ref}
         className={clsx(
-          "px-6 [.header+&]:pt-44 [.header+&]:md:pt-32",
+          "px-6 [.header+&]:pt-44 [.header+&]:md:pt-32 lg:px-8",
           className,
         )}
         {...restProps}
