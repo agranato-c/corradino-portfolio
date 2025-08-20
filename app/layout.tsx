@@ -5,6 +5,7 @@ import "./globals.css";
 
 import { PrismicPreview } from "@prismicio/next";
 import { repositoryName } from "@/prismicio";
+import { Footer } from "./components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,6 +35,7 @@ export default function RootLayout({
 
       <body className="bg-neutral-900 text-white">
         <main className="pt-14 md:mp-16">{children}</main>
+        <Footer />
       </body>
       <PrismicPreview repositoryName={repositoryName} />
     </html>

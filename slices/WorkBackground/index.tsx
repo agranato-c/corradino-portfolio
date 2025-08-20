@@ -41,12 +41,11 @@ const WorkBackground: FC<WorkBackgroundProps> = ({ slice }) => {
         <PrismicRichText field={slice.primary.education} />
       </div>
 
+        <ButtonLink field={slice.primary.engineering_resume} />
+
         <ButtonLink field={slice.primary.calltoactionlink1} />
 
         <ButtonLink field={slice.primary.calltoactionlink2} />
-
-        <ButtonLink
-          field={slice.primary.engineering_resume} />
 
     </div>
 

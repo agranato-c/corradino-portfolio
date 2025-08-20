@@ -8,32 +8,18 @@ export const Footer = () => {
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
-      <div className="container mx-auto px-6">
-        <div className="grid gap-10 md:grid-cols-3">
-          <NavGroup title="Shop">
-            <NavLink href="/fragrance/terra">Terra</NavLink>
-            <NavLink href="/fragrance/igni">Igni</NavLink>
-            <NavLink href="/fragrance/aqua">Aqua</NavLink>
-          </NavGroup>
-
-          <NavGroup title="Social">
-            <NavLink href="#">Instagram</NavLink>
-            <NavLink href="#">X (Twitter)</NavLink>
-            <NavLink href="#">Facebook</NavLink>
-          </NavGroup>
-        </div>
 
         {/* Bottom footer */}
         <div className="mt-16 flex flex-col items-center justify-between gap-6 border-t border-neutral-800 pt-8 md:flex-row">
           <p className="text-center text-sm text-gray-400">
-            © {new Date().getFullYear()} Côte Royale Inc. All rights reserved
+            © {new Date().getFullYear()} The Corradion Group. All rights reserved
           </p>
           <TransitionLink
             href="/"
-            aria-label="Côte Royale Home"
+            aria-label="Corradino"
             className="order-first md:order-none"
           >
-            <Image src="/logo.svg" alt="CÔTE ROYALE" width={150} height={25} />
+            <Image src="../app/Images and resumes/TCG_#2.png" alt="Corradino" width={150} height={25} />
           </TransitionLink>
           <ul
             aria-label="Legal"
@@ -51,7 +37,7 @@ export const Footer = () => {
             </li>
           </ul>
         </div>
-      </div>
+      {/* </div> */}
     </footer>
   );
 };

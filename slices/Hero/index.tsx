@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { Content, isFilled } from "@prismicio/client";
 import { SliceComponentProps, PrismicRichText } from "@prismicio/react";
-import { PrismicNextLink, PrismicNextImage } from "@prismicio/next";
+import { PrismicNextImage } from "@prismicio/next";
 import { Bounded } from "../../app/components/Bounded";
 import { ButtonLink } from "../../app/components/ButtonLink";
 export type HeroProps = SliceComponentProps<Content.HeroSlice>;
@@ -12,7 +12,6 @@ const Hero: FC<HeroProps> = ({ slice }) => {
       className = "relative overflow-hidden min-h-screen"
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      // className="es-bounded es-fullpage-hero relative overflow-hidden bg-[url('/Transportation Systems.png')] bg-cover bg-center text-gray-50 md:py-28"
     >
       <div
         className={`
