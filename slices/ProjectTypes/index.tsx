@@ -40,8 +40,6 @@ const ProjectTypes: FC<ProjectTypesProps> = async ({ slice }) => {
         <Bounded className="translate-y-16 space-y-6 self-start bg-white/10 p-10 opacity-0 lg:col-start-2 lg:row-start-1">
           <h2 className="text-3xl leading-tight font-semibold md:text-4xl">
 
-            <PrismicRichText field={slice.primary.projects} />
-
             <ButtonLink document={whichprotypeDoc} className="mt-6">
               Shop Now
             </ButtonLink>
