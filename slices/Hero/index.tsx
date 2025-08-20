@@ -9,6 +9,7 @@ export type HeroProps = SliceComponentProps<Content.HeroSlice>;
 const Hero: FC<HeroProps> = ({ slice }) => {
   return (
     <Bounded
+      className = "relative overflow-hidden min-h-screen"
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
       // className="es-bounded es-fullpage-hero relative overflow-hidden bg-[url('/Transportation Systems.png')] bg-cover bg-center text-gray-50 md:py-28"
@@ -18,11 +19,11 @@ const Hero: FC<HeroProps> = ({ slice }) => {
           
         `}
       >
-        <div>
+        <div className = "absolute h-full w-full -z-50" >
           {isFilled.image(slice.primary.image) && (
             <PrismicNextImage
               field={slice.primary.background}
-              className="es-fullpage-hero__image relative overflow-hidden bg-cover bg-center text-gray-50 md:py-28"
+              className="object-cover"
               alt="" priority fill
             />
           )}
@@ -30,34 +31,40 @@ const Hero: FC<HeroProps> = ({ slice }) => {
 
         <div className="es-fullpage-hero__content-right">
           <div className="es-fullpage-hero__content__intro">
-            {isFilled.keyText(slice.primary.tagline) && (
-              <p className="es-fullpage-hero__content__intro__eyebrow">
-                {slice.primary.tagline}
-              </p>
-            )}
-
             {isFilled.richText(slice.primary.title) && (
               <div className="es-fullpage-hero__content__intro__headline">
                 <PrismicRichText field={slice.primary.title} />
               </div>
             )}
 
-            {isFilled.richText(slice.primary.description) && (
-              <div className="es-fullpage-hero__content__intro__description">
-                <PrismicRichText field={slice.primary.description} />
-              </div>
-            )}
+            <Bounded
+              data-slice-type={slice.slice_type}
+              data-slice-variation={slice.variation}
+              className="my-6 rounded-lg border-2 border-dashed bg-gray-100 p-2 dark:border-gray-200 dark:bg-muted  space-y-8 text-left border-color: rgb(2, 80, 150)">
+            
+                {isFilled.keyText(slice.primary.tagline) && (
+                  <p className="es-fullpage-hero__content__intro__eyebrow">
+                    {slice.primary.tagline}
+                  </p>
+                )}
+
+                {isFilled.richText(slice.primary.description) && (
+                  <div className="es-fullpage-hero__content__intro__description text-gray-900">
+                    <PrismicRichText field={slice.primary.description} />
+                  </div>
+                )}
+            </Bounded>
 
             {isFilled.image(slice.primary.image) && (
               <img alt="es-fullpage-hero__image" className="inline-flex es-fullpage-hero__image--custom-width" src={slice.primary.image.url ?? "#"} />
             )}
 
             <ButtonLink
-              className="es-call-to-action__link"
+              className="es-call-to-action__link relative z-50"
               field={slice.primary.callToActionLink1}
             />
             <ButtonLink
-              className="es-call-to-action__link"
+              className="es-call-to-action__link relative z-50"
               field={slice.primary.callToActionLink2}
             />
           </div>

@@ -861,6 +861,16 @@ export interface ProjectTypesSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/fields/content-relationship
    */
   projecttype: prismic.ContentRelationshipField<"projectdetails">;
+
+  /**
+   * WhichProType field in *ProjectTypes → Default → Primary*
+   *
+   * - **Field Type**: Content Relationship
+   * - **Placeholder**: *None*
+   * - **API ID Path**: project_types.default.primary.whichprotype
+   * - **Documentation**: https://prismic.io/docs/fields/content-relationship
+   */
+  whichprotype: prismic.ContentRelationshipField<"projectdetails">;
 }
 
 /**

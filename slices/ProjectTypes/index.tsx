@@ -4,6 +4,7 @@ import { createClient } from "@/prismicio";
 import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 import { PrismicNextLink } from "@prismicio/next";
 import { Bounded } from "@/app/components/Bounded";
+import { ButtonLink } from "@/app/components/ButtonLink";
 
 /**
  * Props for `ProjectTypes`.
@@ -22,6 +23,11 @@ const ProjectTypes: FC<ProjectTypesProps> = async ({ slice }) => {
 
   const Projects = slice.primary.projects;
 
+  // Fetch the linked document for whichprotype if it exists
+  const whichprotypeDoc = isFilled.contentRelationship(slice.primary.whichprotype)
+    ? await client.getByID(slice.primary.whichprotype.id)
+    : null;
+
   return (
     <Bounded
       data-slice-type={slice.slice_type}
@@ -33,24 +39,17 @@ const ProjectTypes: FC<ProjectTypesProps> = async ({ slice }) => {
 
         <Bounded className="translate-y-16 space-y-6 self-start bg-white/10 p-10 opacity-0 lg:col-start-2 lg:row-start-1">
           <h2 className="text-3xl leading-tight font-semibold md:text-4xl">
-            <PrismicRichText field={slice.primary.project_type} />
+
+            <PrismicRichText field={slice.primary.projects} />
+
+            <ButtonLink document={whichprotypeDoc} className="mt-6">
+              Shop Now
+            </ButtonLink>
           </h2>
-
-          <PrismicRichText field={slice.primary.projects} />
         </Bounded>
-
 
       </div>
 
-
-      {/**
-       * 💡 Use Prismic MCP with your code editor
-       * Get AI-powered help to build your slice components — based on your actual model.
-
-       * Your code editor reads your slice model and helps you code faster ⚡
-       * 🎙️ Give your feedback: https://community.prismic.io/t/help-us-shape-the-future-of-slice-creation/19505
-       * 📚 Documentation: https://prismic.io/docs/ai#code-with-prismics-mcp-server
-       */}
     </Bounded>
   );
 };

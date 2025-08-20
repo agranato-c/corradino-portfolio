@@ -26,8 +26,16 @@
 				]
 			},
 			"projecttype": {
-				"__TYPE__": "LinkContent",
 				"key": "f77b075b-5033-4f42-8015-a9339bfd736e",
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "DocumentLink",
+					"id": "mock_document_id"
+				}
+			},
+			"whichprotype": {
+				"__TYPE__": "LinkContent",
+				"key": "34631bb6-0935-40b6-9edd-59724f8a473a",
 				"value": {
 					"__TYPE__": "DocumentLink",
 					"id": "mock_document_id"

@@ -40,6 +40,17 @@
               "projectdetails"
             ]
           }
+        },
+        "whichprotype": {
+          "type": "Link",
+          "config": {
+            "label": "WhichProType",
+            "select": "document",
+            "repeat": false,
+            "customtypes": [
+              "projectdetails"
+            ]
+          }
         }
       },
       "items": {}
