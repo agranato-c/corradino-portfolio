@@ -12,7 +12,7 @@ export const OtherProjectTypes = async (
   { currentProjectsUid }: OtherProjectsProps
   ) => {
     const client = createClient();
-    const allProjectTypes = await client.getAllByType("projectdetails")
+    const allProjectTypes = await client.getAllByType("projects")
 
   const otherProjectTypes = allProjectTypes.filter(
     (projectType) => projectType.uid !== currentProjectsUid,

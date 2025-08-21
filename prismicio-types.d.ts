@@ -270,11 +270,11 @@ export type MainpageDocument<Lang extends string = string> =
 type ProjectdetailsDocumentDataSlicesSlice = ProjectTypesSlice;
 
 /**
- * Content for ProjectDetails documents
+ * Content for Projects documents
  */
 interface ProjectdetailsDocumentData {
   /**
-   * Slice Zone field in *ProjectDetails*
+   * Slice Zone field in *Projects*
    *
    * - **Field Type**: Slice Zone
    * - **Placeholder**: *None*
@@ -286,7 +286,7 @@ interface ProjectdetailsDocumentData {
 }
 
 /**
- * ProjectDetails document from Prismic
+ * Projects document from Prismic
  *
  * - **API ID**: `projectdetails`
  * - **Repeatable**: `true`
@@ -830,16 +830,6 @@ export interface ProjectTypesSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/fields/rich-text
    */
   projects: prismic.RichTextField;
-
-  /**
-   * ProjectType field in *ProjectTypes → Default → Primary*
-   *
-   * - **Field Type**: Content Relationship
-   * - **Placeholder**: *None*
-   * - **API ID Path**: project_types.default.primary.projecttype
-   * - **Documentation**: https://prismic.io/docs/fields/content-relationship
-   */
-  projecttype: prismic.ContentRelationshipField<"projectdetails">;
 
   /**
    * WhichProType field in *ProjectTypes → Default → Primary*

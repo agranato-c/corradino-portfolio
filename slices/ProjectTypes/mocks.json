@@ -25,14 +25,6 @@
 					}
 				]
 			},
-			"projecttype": {
-				"key": "f77b075b-5033-4f42-8015-a9339bfd736e",
-				"__TYPE__": "LinkContent",
-				"value": {
-					"__TYPE__": "DocumentLink",
-					"id": "mock_document_id"
-				}
-			},
 			"whichprotype": {
 				"key": "34631bb6-0935-40b6-9edd-59724f8a473a",
 				"__TYPE__": "LinkContent",
@@ -42,7 +34,6 @@
 				}
 			},
 			"projectimage": {
-				"__TYPE__": "ImageContent",
 				"origin": {
 					"id": "main",
 					"url": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2",
@@ -61,6 +52,8 @@
 					"background": "transparent"
 				},
 				"alt": "government",
+				"credits": null,
+				"__TYPE__": "ImageContent",
 				"thumbnails": {}
 			}
 		},
