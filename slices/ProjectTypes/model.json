@@ -12,6 +12,14 @@
       "description": "Default",
       "imageUrl": "",
       "primary": {
+        "projectimage": {
+          "type": "Image",
+          "config": {
+            "label": "ProjectImage",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
         "project_type": {
           "type": "StructuredText",
           "config": {

@@ -34,12 +34,34 @@
 				}
 			},
 			"whichprotype": {
-				"__TYPE__": "LinkContent",
 				"key": "34631bb6-0935-40b6-9edd-59724f8a473a",
+				"__TYPE__": "LinkContent",
 				"value": {
 					"__TYPE__": "DocumentLink",
 					"id": "mock_document_id"
 				}
+			},
+			"projectimage": {
+				"__TYPE__": "ImageContent",
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2",
+					"width": 3648,
+					"height": 4560
+				},
+				"url": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2",
+				"width": 3648,
+				"height": 4560,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"alt": "government",
+				"thumbnails": {}
 			}
 		},
 		"items": []

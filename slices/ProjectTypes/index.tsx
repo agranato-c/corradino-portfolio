@@ -3,8 +3,8 @@ import { Content, isFilled } from "@prismicio/client";
 import { createClient } from "@/prismicio";
 import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 import { PrismicNextLink } from "@prismicio/next";
-import { Bounded } from "@/app/components/Bounded";
-import { ButtonLink } from "@/app/components/ButtonLink";
+import { Bounded } from "@/components/Bounded";
+import { ButtonLink } from "@/components/ButtonLink";
 
 /**
  * Props for `ProjectTypes`.

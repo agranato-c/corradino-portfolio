@@ -2,8 +2,8 @@ import { FC } from "react";
 import { Content } from "@prismicio/client";
 import { SliceComponentProps, PrismicRichText } from "@prismicio/react";
 import { PrismicNextImage, PrismicNextLink } from "@prismicio/next";
-import { Bounded } from "../../app/components/Bounded";
-import { ButtonLink } from "../../app/components/ButtonLink";
+import { Bounded } from "@/components/Bounded";
+import { ButtonLink } from "@/components/ButtonLink";
 
 /**
  * Props for `WorkBackground`.

@@ -2,8 +2,8 @@ import { FC } from "react";
 import { Content, isFilled } from "@prismicio/client";
 import { SliceComponentProps, PrismicRichText } from "@prismicio/react";
 import { PrismicNextLink, PrismicNextImage } from "@prismicio/next";
-import { ButtonLink } from "../../app/components/ButtonLink";
-import { Bounded } from "@/app/components/Bounded";
+import { ButtonLink } from "@/components/ButtonLink";
+import { Bounded } from "@/components/Bounded";
 
 export type CallToActionProps = SliceComponentProps<Content.CallToActionSlice>;
 

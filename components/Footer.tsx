@@ -14,13 +14,13 @@ export const Footer = () => {
           <p className="text-center text-sm text-gray-400">
             © {new Date().getFullYear()} The Corradino Group. All rights reserved
           </p>
-          <TransitionLink
+          {/* <TransitionLink
             href="/"
             aria-label="Corradino"
             className="order-first md:order-none"
           >
             <img src="../app/Images and resumes/TCG_#2.png" alt="Corradino" width={150} height={25} />
-          </TransitionLink>
+          </TransitionLink> */}
           <ul
             aria-label="Legal"
             className="flex flex-wrap justify-center gap-6 text-sm text-gray-400"

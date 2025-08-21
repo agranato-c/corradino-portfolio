@@ -5,7 +5,7 @@ import "./globals.css";
 
 import { PrismicPreview } from "@prismicio/next";
 import { repositoryName } from "@/prismicio";
-import { Footer } from "./components/Footer";
+import { Footer } from "@/components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

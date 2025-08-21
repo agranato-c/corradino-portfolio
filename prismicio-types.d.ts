@@ -282,38 +282,7 @@ interface ProjectdetailsDocumentData {
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/slices
    */
-  slices: prismic.SliceZone<ProjectdetailsDocumentDataSlicesSlice> /**
-   * Meta Title field in *ProjectDetails*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: A title of the page used for social media and search engines
-   * - **API ID Path**: projectdetails.meta_title
-   * - **Tab**: SEO & Metadata
-   * - **Documentation**: https://prismic.io/docs/fields/text
-   */;
-  meta_title: prismic.KeyTextField;
-
-  /**
-   * Meta Description field in *ProjectDetails*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: A brief summary of the page
-   * - **API ID Path**: projectdetails.meta_description
-   * - **Tab**: SEO & Metadata
-   * - **Documentation**: https://prismic.io/docs/fields/text
-   */
-  meta_description: prismic.KeyTextField;
-
-  /**
-   * Meta Image field in *ProjectDetails*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: projectdetails.meta_image
-   * - **Tab**: SEO & Metadata
-   * - **Documentation**: https://prismic.io/docs/fields/image
-   */
-  meta_image: prismic.ImageField<never>;
+  slices: prismic.SliceZone<ProjectdetailsDocumentDataSlicesSlice>;
 }
 
 /**
@@ -832,6 +801,16 @@ export type HeroSlice = prismic.SharedSlice<"hero", HeroSliceVariation>;
  * Primary content in *ProjectTypes → Default → Primary*
  */
 export interface ProjectTypesSliceDefaultPrimary {
+  /**
+   * ProjectImage field in *ProjectTypes → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: project_types.default.primary.projectimage
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  projectimage: prismic.ImageField<never>;
+
   /**
    * Project Type field in *ProjectTypes → Default → Primary*
    *

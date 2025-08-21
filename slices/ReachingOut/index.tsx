@@ -1,8 +1,8 @@
 import { FC } from "react";
 import { Content } from "@prismicio/client";
 import { PrismicRichText, PrismicText, SliceComponentProps } from "@prismicio/react";
-import { Bounded } from "@/app/components/Bounded";
-import { ButtonLink } from "@/app/components/ButtonLink";
+import { Bounded } from "@/components/Bounded";
+import { ButtonLink } from "@/components/ButtonLink";
 
 /**
  * Props for `ReachingOut`.
@@ -70,7 +70,7 @@ const ReachingOut: FC<ReachingOutProps> = ({ slice }) => {
                     <div className="flex h-full items-center justify-center" data-cya11y-org-font-size="16" style={{ fontSize: "16px" }}>
                       <label className="el-checkbox">
                         <span>
-                          <input type="checkbox" id="slice.primary.companyname.checkbox" className="sr-only" value="I have filled out all the required fields." />
+                          <input type="checkbox" id="slice.primary.submission" className="sr-only" value="I have filled out all the required boxes." />
                           <span className="flex h-5 items-center justify-center rounded-md border border-gray-300 bg-white">
                             <svg className="hidden h-4 w-4 text-primary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 12l6 6L20 6" />
@@ -80,8 +80,8 @@ const ReachingOut: FC<ReachingOutProps> = ({ slice }) => {
                       </label>
                       
                       
-                      <ButtonLink href="#" className="w-fit px-6 py-2 font-medium text-black shadow-[3px_3px_0px_black] transition-all hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none bg-[#194f99]" aria-label="Go to the next step" data-cya11y-org-font-size="16"> Submit
-                      </ButtonLink>
+                      {/* <ButtonLink href="#" className="w-fit px-6 py-2 font-medium text-black shadow-[3px_3px_0px_black] transition-all hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none bg-[#194f99]" aria-label="Go to the next step" data-cya11y-org-font-size="16"> Submit
+                      </ButtonLink> */}
                     </div>
               </div>
             </div>
