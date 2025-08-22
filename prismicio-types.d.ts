@@ -485,7 +485,7 @@ export interface CallToActionSliceDefaultPrimaryProjectsItem {
   items: ContentRelationshipFieldWithData<
     [
       {
-        id: "projectdetails";
+        id: "projects";
         fields: ["meta_title", "meta_description", "meta_image"];
       },
     ]
@@ -585,7 +585,7 @@ export interface CallToActionSliceDefaultPrimary {
    * - **API ID Path**: call_to_action.default.primary.resumetopics
    * - **Documentation**: https://prismic.io/docs/fields/content-relationship
    */
-  resumetopics: prismic.ContentRelationshipField<"projectdetails">;
+  resumetopics: prismic.ContentRelationshipField<"projects">;
 }
 
 /**
@@ -880,7 +880,7 @@ export interface ProjectTypesSliceDefaultPrimary {
    * - **API ID Path**: project_types.default.primary.whichprotype
    * - **Documentation**: https://prismic.io/docs/fields/content-relationship
    */
-  whichprotype: prismic.ContentRelationshipField<"projectdetails">;
+  whichprotype: prismic.ContentRelationshipField<"projects">;
 
   /**
    * callToActionLink1 field in *Projects → Default → Primary*

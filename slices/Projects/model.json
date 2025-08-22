@@ -51,7 +51,7 @@
             "label": "WhichProType",
             "select": "document",
             "repeat": false,
-            "customtypes": ["projectdetails"]
+            "customtypes": ["projects"]
           }
         },
         "calltoactionlink1": {
