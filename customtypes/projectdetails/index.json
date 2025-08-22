@@ -1,6 +1,6 @@
 {
   "format": "page",
-  "id": "projects",
+  "id": "projectdetails",
   "label": "Projects",
   "repeatable": true,
   "status": true,

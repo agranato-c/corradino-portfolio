@@ -74,7 +74,7 @@
                   "repeat": false,
                   "customtypes": [
                     {
-                      "id": "projects",
+                      "id": "projectdetails",
                       "fields": [
                         "meta_title",
                         "meta_description",
@@ -94,7 +94,7 @@
             "select": "document",
             "repeat": false,
             "customtypes": [
-              "projects"
+              "projectdetails"
             ]
           }
         }

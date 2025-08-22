@@ -52,7 +52,7 @@
             "select": "document",
             "repeat": false,
             "customtypes": [
-              "projects"
+              "projectdetails"
             ]
           }
         },
