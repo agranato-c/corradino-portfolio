@@ -55,6 +55,38 @@
 				"credits": null,
 				"__TYPE__": "ImageContent",
 				"thumbnails": {}
+			},
+			"projectintro": {
+				"__TYPE__": "FieldContent",
+				"value": "bottle",
+				"type": "Text"
+			},
+			"calltoactionlink1": {
+				"key": "e0b1a604-6cb2-464b-a467-82fda4a32616",
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://prismic.io",
+					"text": "willing"
+				}
+			},
+			"calltoactionlink2": {
+				"key": "54410b9c-0dcb-4b38-a583-4c073cd40ac3",
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://prismic.io",
+					"text": "task"
+				}
+			},
+			"calltoactionlink3": {
+				"__TYPE__": "LinkContent",
+				"key": "834b966c-ffdc-47ad-9cd4-1586a045c8b7",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://slicemachine.dev",
+					"text": "rate"
+				}
 			}
 		},
 		"items": []

@@ -832,6 +832,16 @@ export interface ProjectTypesSliceDefaultPrimary {
   projects: prismic.RichTextField;
 
   /**
+   * projectintro field in *ProjectTypes → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: My other projects include
+   * - **API ID Path**: project_types.default.primary.projectintro
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  projectintro: prismic.KeyTextField;
+
+  /**
    * WhichProType field in *ProjectTypes → Default → Primary*
    *
    * - **Field Type**: Content Relationship
@@ -840,6 +850,54 @@ export interface ProjectTypesSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/fields/content-relationship
    */
   whichprotype: prismic.ContentRelationshipField<"projectdetails">;
+
+  /**
+   * callToActionLink1 field in *ProjectTypes → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: project_types.default.primary.calltoactionlink1
+   * - **Documentation**: https://prismic.io/docs/fields/link
+   */
+  calltoactionlink1: prismic.LinkField<
+    string,
+    string,
+    unknown,
+    prismic.FieldState,
+    never
+  >;
+
+  /**
+   * callToActionLink2 field in *ProjectTypes → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: project_types.default.primary.calltoactionlink2
+   * - **Documentation**: https://prismic.io/docs/fields/link
+   */
+  calltoactionlink2: prismic.LinkField<
+    string,
+    string,
+    unknown,
+    prismic.FieldState,
+    never
+  >;
+
+  /**
+   * callToActionLink3 field in *ProjectTypes → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: project_types.default.primary.calltoactionlink3
+   * - **Documentation**: https://prismic.io/docs/fields/link
+   */
+  calltoactionlink3: prismic.LinkField<
+    string,
+    string,
+    unknown,
+    prismic.FieldState,
+    never
+  >;
 }
 
 /**

@@ -38,6 +38,13 @@
             "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
           }
         },
+        "projectintro": {
+          "type": "Text",
+          "config": {
+            "label": "projectintro",
+            "placeholder": "My other projects include"
+          }
+        },
         "whichprotype": {
           "type": "Link",
           "config": {
@@ -45,8 +52,41 @@
             "select": "document",
             "repeat": false,
             "customtypes": [
-              "projectdetails"
+              "projects"
             ]
+          }
+        },
+        "calltoactionlink1": {
+          "type": "Link",
+          "config": {
+            "label": "callToActionLink1",
+            "placeholder": "",
+            "select": null,
+            "allowTargetBlank": true,
+            "allowText": true,
+            "repeat": false
+          }
+        },
+        "calltoactionlink2": {
+          "type": "Link",
+          "config": {
+            "label": "callToActionLink2",
+            "placeholder": "",
+            "select": null,
+            "allowTargetBlank": true,
+            "allowText": true,
+            "repeat": false
+          }
+        },
+        "calltoactionlink3": {
+          "type": "Link",
+          "config": {
+            "label": "callToActionLink3",
+            "placeholder": "",
+            "select": null,
+            "allowTargetBlank": true,
+            "allowText": true,
+            "repeat": false
           }
         }
       },
