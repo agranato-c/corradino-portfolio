@@ -267,37 +267,37 @@ export type MainpageDocument<Lang extends string = string> =
     Lang
   >;
 
-type ProjectsDocumentDataSlicesSlice = ProjectTypesSlice;
+type ProjectdetailsDocumentDataSlicesSlice = ProjectTypesSlice;
 
 /**
  * Content for Projects documents
  */
-interface ProjectsDocumentData {
+interface ProjectdetailsDocumentData {
   /**
    * Slice Zone field in *Projects*
    *
    * - **Field Type**: Slice Zone
    * - **Placeholder**: *None*
-   * - **API ID Path**: projects.slices[]
+   * - **API ID Path**: projectdetails.slices[]
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/slices
    */
-  slices: prismic.SliceZone<ProjectsDocumentDataSlicesSlice>;
+  slices: prismic.SliceZone<ProjectdetailsDocumentDataSlicesSlice>;
 }
 
 /**
  * Projects document from Prismic
  *
- * - **API ID**: `projects`
+ * - **API ID**: `projectdetails`
  * - **Repeatable**: `true`
  * - **Documentation**: https://prismic.io/docs/content-modeling
  *
  * @typeParam Lang - Language API ID of the document.
  */
-export type ProjectsDocument<Lang extends string = string> =
+export type ProjectdetailsDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<
-    Simplify<ProjectsDocumentData>,
-    "projects",
+    Simplify<ProjectdetailsDocumentData>,
+    "projectdetails",
     Lang
   >;
 
@@ -435,7 +435,7 @@ export type AllDocumentTypes =
   | ContactDocument
   | ContactinformationDocument
   | MainpageDocument
-  | ProjectsDocument
+  | ProjectdetailsDocument
   | ReachingmeDocument
   | ResumeDocument;
 
@@ -454,7 +454,7 @@ export interface CallToActionSliceDefaultPrimaryProjectsItem {
   items: ContentRelationshipFieldWithData<
     [
       {
-        id: "projects";
+        id: "projectdetails";
         fields: ["meta_title", "meta_description", "meta_image"];
       },
     ]
@@ -554,7 +554,7 @@ export interface CallToActionSliceDefaultPrimary {
    * - **API ID Path**: call_to_action.default.primary.resumetopics
    * - **Documentation**: https://prismic.io/docs/fields/content-relationship
    */
-  resumetopics: prismic.ContentRelationshipField<"projects">;
+  resumetopics: prismic.ContentRelationshipField<"projectdetails">;
 }
 
 /**
@@ -849,7 +849,7 @@ export interface ProjectTypesSliceDefaultPrimary {
    * - **API ID Path**: project_types.default.primary.whichprotype
    * - **Documentation**: https://prismic.io/docs/fields/content-relationship
    */
-  whichprotype: prismic.ContentRelationshipField<"projects">;
+  whichprotype: prismic.ContentRelationshipField<"projectdetails">;
 
   /**
    * callToActionLink1 field in *ProjectTypes → Default → Primary*
@@ -1183,9 +1183,9 @@ declare module "@prismicio/client" {
       MainpageDocument,
       MainpageDocumentData,
       MainpageDocumentDataSlicesSlice,
-      ProjectsDocument,
-      ProjectsDocumentData,
-      ProjectsDocumentDataSlicesSlice,
+      ProjectdetailsDocument,
+      ProjectdetailsDocumentData,
+      ProjectdetailsDocumentDataSlicesSlice,
       ReachingmeDocument,
       ReachingmeDocumentData,
       ReachingmeDocumentDataSlicesSlice,
