@@ -267,37 +267,68 @@ export type MainpageDocument<Lang extends string = string> =
     Lang
   >;
 
-type ProjectdetailsDocumentDataSlicesSlice = ProjectTypesSlice;
+type ProjectsDocumentDataSlicesSlice = ProjectTypesSlice;
 
 /**
  * Content for Projects documents
  */
-interface ProjectdetailsDocumentData {
+interface ProjectsDocumentData {
   /**
    * Slice Zone field in *Projects*
    *
    * - **Field Type**: Slice Zone
    * - **Placeholder**: *None*
-   * - **API ID Path**: projectdetails.slices[]
+   * - **API ID Path**: projects.slices[]
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/slices
    */
-  slices: prismic.SliceZone<ProjectdetailsDocumentDataSlicesSlice>;
+  slices: prismic.SliceZone<ProjectsDocumentDataSlicesSlice> /**
+   * Meta Title field in *Projects*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: projects.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */;
+  meta_title: prismic.KeyTextField;
+
+  /**
+   * Meta Description field in *Projects*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: projects.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/fields/text
+   */
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * Meta Image field in *Projects*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: projects.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/fields/image
+   */
+  meta_image: prismic.ImageField<never>;
 }
 
 /**
  * Projects document from Prismic
  *
- * - **API ID**: `projectdetails`
+ * - **API ID**: `projects`
  * - **Repeatable**: `true`
  * - **Documentation**: https://prismic.io/docs/content-modeling
  *
  * @typeParam Lang - Language API ID of the document.
  */
-export type ProjectdetailsDocument<Lang extends string = string> =
+export type ProjectsDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<
-    Simplify<ProjectdetailsDocumentData>,
-    "projectdetails",
+    Simplify<ProjectsDocumentData>,
+    "projects",
     Lang
   >;
 
@@ -435,7 +466,7 @@ export type AllDocumentTypes =
   | ContactDocument
   | ContactinformationDocument
   | MainpageDocument
-  | ProjectdetailsDocument
+  | ProjectsDocument
   | ReachingmeDocument
   | ResumeDocument;
 
@@ -798,11 +829,11 @@ type HeroSliceVariation = HeroSliceDefault;
 export type HeroSlice = prismic.SharedSlice<"hero", HeroSliceVariation>;
 
 /**
- * Primary content in *ProjectTypes → Default → Primary*
+ * Primary content in *Projects → Default → Primary*
  */
 export interface ProjectTypesSliceDefaultPrimary {
   /**
-   * ProjectImage field in *ProjectTypes → Default → Primary*
+   * ProjectImage field in *Projects → Default → Primary*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
@@ -812,7 +843,7 @@ export interface ProjectTypesSliceDefaultPrimary {
   projectimage: prismic.ImageField<never>;
 
   /**
-   * Project Type field in *ProjectTypes → Default → Primary*
+   * Project Type field in *Projects → Default → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: Title
@@ -822,7 +853,7 @@ export interface ProjectTypesSliceDefaultPrimary {
   project_type: prismic.RichTextField;
 
   /**
-   * Projects field in *ProjectTypes → Default → Primary*
+   * Projects field in *Projects → Default → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: My Projects
@@ -832,7 +863,7 @@ export interface ProjectTypesSliceDefaultPrimary {
   projects: prismic.RichTextField;
 
   /**
-   * projectintro field in *ProjectTypes → Default → Primary*
+   * projectintro field in *Projects → Default → Primary*
    *
    * - **Field Type**: Text
    * - **Placeholder**: My other projects include
@@ -842,7 +873,7 @@ export interface ProjectTypesSliceDefaultPrimary {
   projectintro: prismic.KeyTextField;
 
   /**
-   * WhichProType field in *ProjectTypes → Default → Primary*
+   * WhichProType field in *Projects → Default → Primary*
    *
    * - **Field Type**: Content Relationship
    * - **Placeholder**: *None*
@@ -852,7 +883,7 @@ export interface ProjectTypesSliceDefaultPrimary {
   whichprotype: prismic.ContentRelationshipField<"projectdetails">;
 
   /**
-   * callToActionLink1 field in *ProjectTypes → Default → Primary*
+   * callToActionLink1 field in *Projects → Default → Primary*
    *
    * - **Field Type**: Link
    * - **Placeholder**: *None*
@@ -868,7 +899,7 @@ export interface ProjectTypesSliceDefaultPrimary {
   >;
 
   /**
-   * callToActionLink2 field in *ProjectTypes → Default → Primary*
+   * callToActionLink2 field in *Projects → Default → Primary*
    *
    * - **Field Type**: Link
    * - **Placeholder**: *None*
@@ -884,7 +915,7 @@ export interface ProjectTypesSliceDefaultPrimary {
   >;
 
   /**
-   * callToActionLink3 field in *ProjectTypes → Default → Primary*
+   * callToActionLink3 field in *Projects → Default → Primary*
    *
    * - **Field Type**: Link
    * - **Placeholder**: *None*
@@ -901,7 +932,7 @@ export interface ProjectTypesSliceDefaultPrimary {
 }
 
 /**
- * Default variation for ProjectTypes Slice
+ * Default variation for Projects Slice
  *
  * - **API ID**: `default`
  * - **Description**: Default
@@ -914,12 +945,12 @@ export type ProjectTypesSliceDefault = prismic.SharedSliceVariation<
 >;
 
 /**
- * Slice variation for *ProjectTypes*
+ * Slice variation for *Projects*
  */
 type ProjectTypesSliceVariation = ProjectTypesSliceDefault;
 
 /**
- * ProjectTypes Shared Slice
+ * Projects Shared Slice
  *
  * - **API ID**: `project_types`
  * - **Description**: ProjectTypes
@@ -1183,9 +1214,9 @@ declare module "@prismicio/client" {
       MainpageDocument,
       MainpageDocumentData,
       MainpageDocumentDataSlicesSlice,
-      ProjectdetailsDocument,
-      ProjectdetailsDocumentData,
-      ProjectdetailsDocumentDataSlicesSlice,
+      ProjectsDocument,
+      ProjectsDocumentData,
+      ProjectsDocumentDataSlicesSlice,
       ReachingmeDocument,
       ReachingmeDocumentData,
       ReachingmeDocumentDataSlicesSlice,

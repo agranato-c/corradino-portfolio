@@ -1,7 +1,7 @@
 {
   "id": "project_types",
   "type": "SharedSlice",
-  "name": "ProjectTypes",
+  "name": "Projects",
   "description": "ProjectTypes",
   "variations": [
     {
@@ -51,9 +51,7 @@
             "label": "WhichProType",
             "select": "document",
             "repeat": false,
-            "customtypes": [
-              "projectdetails"
-            ]
+            "customtypes": ["projectdetails"]
           }
         },
         "calltoactionlink1": {
