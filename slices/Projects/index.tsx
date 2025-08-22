@@ -17,7 +17,7 @@ export type ProjectTypesProps = SliceComponentProps<Content.ProjectTypesSlice>;
 const ProjectTypes: FC<ProjectTypesProps> = async ({ slice }) => {
   const client = createClient();
   const projectdetails = isFilled.contentRelationship(slice.primary.project_type)
-    ? await client.getByID<Content.ProjectdetailsDocument>(
+    ? await client.getByID<Content.ProjectsDocument>(
       slice.primary.project_type.id)
   : null;
 

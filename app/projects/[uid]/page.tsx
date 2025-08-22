@@ -15,7 +15,7 @@ type Params = { uid: string };
 export default async function Page({ params }: { params: Promise<Params> }) {
   const { uid } = await params;
   const client = createClient();
-  const page = await client.getByUID("projectdetails", uid).catch(() => notFound());
+  const page = await client.getByUID("projects", uid).catch(() => notFound());
   const slice = page.data.slices[0];
   return (
     <>
@@ -86,7 +86,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
 // }): Promise<Metadata> {
 //   const { uid } = await params;
 //   const client = createClient();
-//   const page = await client.getByUID("projectdetails", uid).catch(() => notFound());
+//   const page = await client.getByUID("projects", uid).catch(() => notFound());
 
 //   return {
 //     title: asText(page.data.title),
@@ -99,7 +99,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
 
 export async function generateStaticParams() {
   const client = createClient();
-  const pages = await client.getAllByType("projectdetails");
+  const pages = await client.getAllByType("projects");
 
   return pages.map((page) => ({ uid: page.uid }));
 }
