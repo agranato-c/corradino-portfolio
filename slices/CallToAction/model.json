@@ -60,33 +60,6 @@
             "repeat": true
           }
         },
-        "projects": {
-          "type": "Group",
-          "config": {
-            "label": "Projects",
-            "repeat": true,
-            "fields": {
-              "items": {
-                "type": "Link",
-                "config": {
-                  "label": "Items",
-                  "select": "document",
-                  "repeat": false,
-                  "customtypes": [
-                    {
-                      "id": "projects",
-                      "fields": [
-                        "meta_title",
-                        "meta_description",
-                        "meta_image"
-                      ]
-                    }
-                  ]
-                }
-              }
-            }
-          }
-        },
         "resumetopics": {
           "type": "Link",
           "config": {
@@ -155,24 +128,6 @@
             "allowTargetBlank": true,
             "allowText": true,
             "repeat": true
-          }
-        },
-        "projects": {
-          "type": "Group",
-          "config": {
-            "label": "Projects",
-            "repeat": true,
-            "fields": {
-              "items": {
-                "type": "Link",
-                "config": {
-                  "label": "Items",
-                  "select": "document",
-                  "repeat": false,
-                  "customtypes": []
-                }
-              }
-            }
           }
         },
         "resumetopics": {

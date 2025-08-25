@@ -14,7 +14,7 @@ console.log("slices", slice.primary.projects)
     <Bounded
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="es-bounded es-call-to-action overflow-hidden bg-black py-16 text-white md:py-24"
+      className="es-bounded es-call-to-action overflow-hidden bg-blue-500 py-16 text-white md:py-24"
     >
       <div className="es-bounded__content es-call-to-action__content">
         {isFilled.image(slice.primary.image) && (
@@ -39,12 +39,14 @@ console.log("slices", slice.primary.projects)
 
         {slice.primary.buttonLink1.map((link) => (
           <ButtonLink
+            className = "rounded-md h-10 px-4 py-2 border border-primary" 
             key={link.key}
             field={link}
           />
         ))}
         {slice.primary.buttonLink2.map((link) => (
           <ButtonLink
+            className = "rounded-md h-10 px-4 py-2 border border-primary" 
             key={link.key}
             field={link}
           />

@@ -45,6 +45,7 @@ export const OtherProjectTypes = async (
               <div className="mt-8 space-y-1 text-white">
                 <h3 className="font-display text-2xl">
                   <PrismicText field={slice?.primary.project_type} />
+                  {/* <PrismicText field={slice?.primary.project_type} /> */}
                 </h3>
               </div>
             </TransitionLink>

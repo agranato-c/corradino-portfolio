@@ -39,7 +39,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
             className="relative" />
         </div>
 
-        {/* Product info section */}
+        {/* Additional info section */}
         <div className="text-white grid-cols-2">
 
           <h1 className="font-display mb-4 border-b border-neutral-700 pb-2 text-4xl md:text-5xl">
@@ -79,23 +79,24 @@ export default async function Page({ params }: { params: Promise<Params> }) {
   );
 }
 
-// export async function generateMetadata({
-//   params,
-// }: {
-//   params: Promise<Params>;
-// }): Promise<Metadata> {
-//   const { uid } = await params;
-//   const client = createClient();
-//   const page = await client.getByUID("projects", uid).catch(() => notFound());
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<Params>;
+}): Promise<Metadata> {
+  const { uid } = await params;
+  const client = createClient();
+  const page = await client.getByUID("projects", uid).catch(() => notFound());
+  const slice = page.data.slices[0];
 
-//   return {
-//     title: asText(page.data.title),
-//     description: `Discover ${asText(page.data.title)}, the newest project from our portfolio.`,
-//     openGraph: {
-//       images: [{ url: asImageSrc(page.data.meta_image) ?? "" }],
-//     },
-//   };
-// }
+   return {
+     title: asText(slice?.primary.project_type),
+     description: `Discover ${asText(slice?.primary.project_type)}, the newest project from our portfolio.`,
+     openGraph: {
+       images: [{ url: asImageSrc(page.data.meta_image) ?? "" }],
+     },
+   };
+ }
 
 export async function generateStaticParams() {
   const client = createClient();

@@ -471,43 +471,6 @@ export type AllDocumentTypes =
   | ResumeDocument;
 
 /**
- * Item in *CallToAction → Default → Primary → Projects*
- */
-export interface CallToActionSliceDefaultPrimaryProjectsItem {
-  /**
-   * Items field in *CallToAction → Default → Primary → Projects*
-   *
-   * - **Field Type**: Content Relationship
-   * - **Placeholder**: *None*
-   * - **API ID Path**: call_to_action.default.primary.projects[].items
-   * - **Documentation**: https://prismic.io/docs/fields/content-relationship
-   */
-  items: ContentRelationshipFieldWithData<
-    [
-      {
-        id: "projects";
-        fields: ["meta_title", "meta_description", "meta_image"];
-      },
-    ]
-  >;
-}
-
-/**
- * Item in *CallToAction → AlignLeft → Primary → Projects*
- */
-export interface CallToActionSliceAlignLeftPrimaryProjectsItem {
-  /**
-   * Items field in *CallToAction → AlignLeft → Primary → Projects*
-   *
-   * - **Field Type**: Content Relationship
-   * - **Placeholder**: *None*
-   * - **API ID Path**: call_to_action.alignLeft.primary.projects[].items
-   * - **Documentation**: https://prismic.io/docs/fields/content-relationship
-   */
-  items: prismic.ContentRelationshipField;
-}
-
-/**
  * Primary content in *CallToAction → Default → Primary*
  */
 export interface CallToActionSliceDefaultPrimary {
@@ -563,18 +526,6 @@ export interface CallToActionSliceDefaultPrimary {
    */
   buttonLink2: prismic.Repeatable<
     prismic.LinkField<string, string, unknown, prismic.FieldState, never>
-  >;
-
-  /**
-   * Projects field in *CallToAction → Default → Primary*
-   *
-   * - **Field Type**: Group
-   * - **Placeholder**: *None*
-   * - **API ID Path**: call_to_action.default.primary.projects[]
-   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
-   */
-  projects: prismic.GroupField<
-    Simplify<CallToActionSliceDefaultPrimaryProjectsItem>
   >;
 
   /**
@@ -657,18 +608,6 @@ export interface CallToActionSliceAlignLeftPrimary {
    */
   buttonLink2: prismic.Repeatable<
     prismic.LinkField<string, string, unknown, prismic.FieldState, never>
-  >;
-
-  /**
-   * Projects field in *CallToAction → AlignLeft → Primary*
-   *
-   * - **Field Type**: Group
-   * - **Placeholder**: *None*
-   * - **API ID Path**: call_to_action.alignLeft.primary.projects[]
-   * - **Documentation**: https://prismic.io/docs/fields/repeatable-group
-   */
-  projects: prismic.GroupField<
-    Simplify<CallToActionSliceAlignLeftPrimaryProjectsItem>
   >;
 
   /**
@@ -1225,9 +1164,7 @@ declare module "@prismicio/client" {
       ResumeDocumentDataSlicesSlice,
       AllDocumentTypes,
       CallToActionSlice,
-      CallToActionSliceDefaultPrimaryProjectsItem,
       CallToActionSliceDefaultPrimary,
-      CallToActionSliceAlignLeftPrimaryProjectsItem,
       CallToActionSliceAlignLeftPrimary,
       CallToActionSliceVariation,
       CallToActionSliceDefault,

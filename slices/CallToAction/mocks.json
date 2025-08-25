@@ -78,27 +78,6 @@
 					}
 				]
 			},
-			"projects": {
-				"__TYPE__": "GroupContentType",
-				"value": [
-					{
-						"__TYPE__": "GroupItemContent",
-						"value": [
-							[
-								"items",
-								{
-									"key": "468d47f0-8803-4af3-bfbd-1524607f6b84",
-									"__TYPE__": "LinkContent",
-									"value": {
-										"__TYPE__": "DocumentLink",
-										"id": "mock_document_id"
-									}
-								}
-							]
-						]
-					}
-				]
-			},
 			"resumetopics": {
 				"key": "d256d44b-29a7-4f89-98b9-ce98ce8e7f93",
 				"__TYPE__": "LinkContent",
@@ -190,27 +169,6 @@
 							"url": "http://twitter.com",
 							"text": "silent"
 						}
-					}
-				]
-			},
-			"projects": {
-				"__TYPE__": "GroupContentType",
-				"value": [
-					{
-						"__TYPE__": "GroupItemContent",
-						"value": [
-							[
-								"items",
-								{
-									"key": "79a50baf-ac7a-4310-a555-adcea483e5d1",
-									"__TYPE__": "LinkContent",
-									"value": {
-										"__TYPE__": "DocumentLink",
-										"id": "mock_document_id"
-									}
-								}
-							]
-						]
 					}
 				]
 			},

@@ -67,17 +67,19 @@ const ReachingOut: FC<ReachingOutProps> = ({ slice }) => {
                     <input id="slice.primary.companyname" className="block w-full rounded-md border-0 py-1.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6" placeholder="Your Company" aria-invalid="false" type="text" name="companyname" />
                   </div>
 
-                    <div className="flex h-full items-center justify-center" data-cya11y-org-font-size="16" style={{ fontSize: "16px" }}>
-                      <label className="el-checkbox">
-                        <span>
-                          <input type="checkbox" id="slice.primary.submission" className="sr-only" value="I have filled out all the required boxes." />
-                          <span className="flex h-5 items-center justify-center rounded-md border border-gray-300 bg-white">
-                            <svg className="hidden h-4 w-4 text-primary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 12l6 6L20 6" />
-                            </svg>
-                          </span>
-                        </span>
-                      </label>
+                  <div className="flex h-full items-center justify-center" data-cya11y-org-font-size="16" style={{ fontSize: "16px" }}>
+                    <label>
+                      I have filled out all the required boxes.
+                    </label>
+                      <span>
+                        <input type="checkbox" id="slice.primary.submission" value="I have filled out all the required boxes." />
+                        <label className="flex h-5 items-center justify-center rounded-md border border-gray-300 bg-white text-black shadow-sm focus-within:ring-2 focus-within:ring-primary focus-within:ring-offset-2" aria-hidden="true">
+                          I have filled out all the required boxes.
+                          {/* <svg className="hidden h-4 w-4 text-primary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 12l6 6L20 6" />
+                          </svg> */}
+                        </label>
+                      </span>
                       
                       
                       {/* <ButtonLink href="#" className="w-fit px-6 py-2 font-medium text-black shadow-[3px_3px_0px_black] transition-all hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none bg-[#194f99]" aria-label="Go to the next step" data-cya11y-org-font-size="16"> Submit
