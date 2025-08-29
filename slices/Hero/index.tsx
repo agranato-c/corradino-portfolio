@@ -46,7 +46,7 @@ const Hero: FC<HeroProps> = ({ slice }) => {
                     {slice.primary.tagline}
                   </p>
                 )}
-
+                <br />
                 {isFilled.richText(slice.primary.description) && (
                   <div className="es-fullpage-hero__content__intro__description text-gray-900">
                     <PrismicRichText field={slice.primary.description} />
@@ -138,10 +138,13 @@ const Hero: FC<HeroProps> = ({ slice }) => {
           }
 
           .es-fullpage-hero__content__intro__eyebrow {
-              color: #47C1AF;
-              font-size: 1.15rem;
+              color: white;
+              font-size: 1.25rem;
               font-weight: 500;
               margin: 0;
+              background-color: black;
+              pl-1;
+              text-align: center;
           }
 
           .es-fullpage-hero__content__intro__headline {

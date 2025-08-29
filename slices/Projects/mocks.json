@@ -25,42 +25,6 @@
 					}
 				]
 			},
-			"whichprotype": {
-				"key": "34631bb6-0935-40b6-9edd-59724f8a473a",
-				"__TYPE__": "LinkContent",
-				"value": {
-					"__TYPE__": "DocumentLink",
-					"id": "mock_document_id"
-				}
-			},
-			"projectimage": {
-				"origin": {
-					"id": "main",
-					"url": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2",
-					"width": 3648,
-					"height": 4560
-				},
-				"url": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2",
-				"width": 3648,
-				"height": 4560,
-				"edit": {
-					"zoom": 1,
-					"crop": {
-						"x": 0,
-						"y": 0
-					},
-					"background": "transparent"
-				},
-				"alt": "government",
-				"credits": null,
-				"__TYPE__": "ImageContent",
-				"thumbnails": {}
-			},
-			"projectintro": {
-				"__TYPE__": "FieldContent",
-				"value": "bottle",
-				"type": "Text"
-			},
 			"calltoactionlink1": {
 				"key": "e0b1a604-6cb2-464b-a467-82fda4a32616",
 				"__TYPE__": "LinkContent",
@@ -80,13 +44,56 @@
 				}
 			},
 			"calltoactionlink3": {
-				"__TYPE__": "LinkContent",
 				"key": "834b966c-ffdc-47ad-9cd4-1586a045c8b7",
+				"__TYPE__": "LinkContent",
 				"value": {
 					"__TYPE__": "ExternalLink",
 					"url": "https://slicemachine.dev",
 					"text": "rate"
 				}
+			},
+			"calltoactionlink4": {
+				"key": "d3ef4964-f59d-4cbb-ad11-34564984513f",
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://slicemachine.dev",
+					"text": "beautiful"
+				}
+			},
+			"projectimage": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1587905069134-008460d7a636",
+					"width": 3935,
+					"height": 5894
+				},
+				"url": "https://images.unsplash.com/photo-1587905069134-008460d7a636",
+				"width": 3935,
+				"height": 5894,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"alt": "tower",
+				"credits": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"projectintro": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Reprehenderit consequat ipsum qui culpa consequat officia non laborum. Qui enim ut exercitation irure anim ea elit ex et excepteur ex incididunt dolor amet ad. Laboris tempor culpa magna eu nisi veniam duis voluptate officia culpa officia et do occaecat."
+						}
+					}
+				]
 			}
 		},
 		"items": []

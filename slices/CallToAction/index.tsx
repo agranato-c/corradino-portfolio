@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { Content, isFilled } from "@prismicio/client";
 import { SliceComponentProps, PrismicRichText } from "@prismicio/react";
-import { PrismicNextLink, PrismicNextImage } from "@prismicio/next";
+import { PrismicNextImage } from "@prismicio/next";
 import { ButtonLink } from "@/components/ButtonLink";
 import { Bounded } from "@/components/Bounded";
 
@@ -9,7 +9,7 @@ export type CallToActionProps = SliceComponentProps<Content.CallToActionSlice>;
 
 const CallToAction: FC<CallToActionProps> = ({ slice }) => {
   const alignment = slice.variation === "alignLeft" ? "left" : "center";
-console.log("slices", slice.primary.projects)
+
   return (
     <Bounded
       data-slice-type={slice.slice_type}
@@ -39,36 +39,18 @@ console.log("slices", slice.primary.projects)
 
         {slice.primary.buttonLink1.map((link) => (
           <ButtonLink
-            className = "rounded-md h-10 px-4 py-2 border border-primary" 
+            className = "rounded-md h-10 px-4 py-2 border border-primary relative z-50 font-bold w-fit px-6 py-2 text-black shadow-[3px_3px_0px_black] transition-all hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none bg-[#194f99] rounded-md h-10" 
             key={link.key}
             field={link}
           />
         ))}
         {slice.primary.buttonLink2.map((link) => (
           <ButtonLink
-            className = "rounded-md h-10 px-4 py-2 border border-primary" 
+            className = "rounded-md h-10 px-4 py-2 border border-primary relative z-50 font-bold w-fit px-6 py-2 text-black shadow-[3px_3px_0px_black] transition-all hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none bg-[#194f99] rounded-md h-10" 
             key={link.key}
             field={link}
           />
         ))}
-
-
-
-        {/* const fragrance = await client.getByID<ProjectsDocument>(id);
-        {slice.primary.projects.map((item) => {
-          // Type guard to check if 'project' exists on item and is an object with 'id'
-            if (isFilled.contentRelationship(item.projects)) {
-
-            return (
-              <div
-                key={item.projects.id}
-                id={item.projects.id}
-              >
-              </div>
-            );
-          }
-          return null;
-        })} */}
       </div>
 
       <style>

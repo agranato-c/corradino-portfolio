@@ -1,5 +1,4 @@
 import { ReactNode } from "react";
-import Image from "next/image";
 import { TransitionLink } from "../components/TransitionLink";
 
 export const Footer = () => {

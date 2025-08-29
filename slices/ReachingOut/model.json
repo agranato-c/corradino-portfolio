@@ -47,27 +47,13 @@
             "placeholder": ""
           }
         },
-        "submission": {
+        "contactingback": {
           "type": "Boolean",
           "config": {
-            "label": "Submission",
+            "label": "ContactingBack",
             "placeholder_false": "false",
             "placeholder_true": "true",
             "default_value": false
-          }
-        },
-        "errormessage": {
-          "type": "Text",
-          "config": {
-            "label": "ErrorMessage",
-            "placeholder": "Incomplete!"
-          }
-        },
-        "completion": {
-          "type": "Text",
-          "config": {
-            "label": "Completion",
-            "placeholder": "Complete!"
           }
         }
       },

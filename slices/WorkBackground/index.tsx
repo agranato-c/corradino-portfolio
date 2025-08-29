@@ -31,7 +31,7 @@ const WorkBackground: FC<WorkBackgroundProps> = ({ slice }) => {
       )}
     </div>
 
-    <div className="relative flex h-screen flex-col justify-center">
+    <div className="relative flex h-screen flex-col justify-center ml-3">
 
       <div className="max-w-xl text-6xl leading-tight text-neutral-500 md:text-2xl lg:text-4xl">
         <PrismicRichText field={slice.primary.label} />
@@ -41,11 +41,20 @@ const WorkBackground: FC<WorkBackgroundProps> = ({ slice }) => {
         <PrismicRichText field={slice.primary.education} />
       </div>
 
-        <ButtonLink className="rounded-md inline-flex items-center justify-center whitespace-nowrap text-sm font-extrabold ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 uppercase text-primary bg-background hover:bg-primary hover:text-primary-foreground dark:bg-white dark:text-primary dark:hover:bg-primary dark:hover:text-black h-10 px-4 py-2 border border-primary" field={slice.primary.engineering_resume}  />
+        <ButtonLink
+          className = "rounded-md h-14 px-4 py-2 border border-primary inline-flex text-black hover:text-purple-400 text-sm font-extrabold ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
+          field={slice.primary.engineering_resume}  />
+        
+        <br />
 
-        <ButtonLink className = "rounded-md h-10 px-4 py-2 border border-primary" field={slice.primary.calltoactionlink1} />
-
-        <ButtonLink className = "rounded-md h-10 px-4 py-2 border border-primary" field={slice.primary.calltoactionlink2} />
+        <ButtonLink
+          className = "rounded-md h-10 px-4 py-2 border border-primary inline-flex text-black hover:text-purple-700"
+          field={slice.primary.calltoactionlink1}
+        />
+        <ButtonLink
+          className = "rounded-md h-10 px-4 py-2 border border-primary inline-flex text-black hover:text-purple-700"
+          field={slice.primary.calltoactionlink2}
+        />
 
     </div>
 

@@ -15,7 +15,7 @@
         "projectimage": {
           "type": "Image",
           "config": {
-            "label": "ProjectImage",
+            "label": "projectimage",
             "constraint": {},
             "thumbnails": []
           }
@@ -39,19 +39,12 @@
           }
         },
         "projectintro": {
-          "type": "Text",
+          "type": "StructuredText",
           "config": {
-            "label": "projectintro",
-            "placeholder": "My other projects include"
-          }
-        },
-        "whichprotype": {
-          "type": "Link",
-          "config": {
-            "label": "WhichProType",
-            "select": "document",
-            "repeat": false,
-            "customtypes": ["projects"]
+            "label": "ProjectIntro",
+            "placeholder": "My other projects include",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,image,embed"
           }
         },
         "calltoactionlink1": {
@@ -80,6 +73,17 @@
           "type": "Link",
           "config": {
             "label": "callToActionLink3",
+            "placeholder": "",
+            "select": null,
+            "allowTargetBlank": true,
+            "allowText": true,
+            "repeat": false
+          }
+        },
+        "calltoactionlink4": {
+          "type": "Link",
+          "config": {
+            "label": "callToActionLink4",
             "placeholder": "",
             "select": null,
             "allowTargetBlank": true,

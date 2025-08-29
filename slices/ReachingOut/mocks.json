@@ -28,19 +28,9 @@
 				"value": "wolf",
 				"type": "Text"
 			},
-			"submission": {
+			"contactingback": {
 				"__TYPE__": "BooleanContent",
 				"value": true
-			},
-			"errormessage": {
-				"__TYPE__": "FieldContent",
-				"value": "neck",
-				"type": "Text"
-			},
-			"completion": {
-				"__TYPE__": "FieldContent",
-				"value": "joined",
-				"type": "Text"
 			}
 		},
 		"items": []

@@ -772,7 +772,7 @@ export type HeroSlice = prismic.SharedSlice<"hero", HeroSliceVariation>;
  */
 export interface ProjectTypesSliceDefaultPrimary {
   /**
-   * ProjectImage field in *Projects → Default → Primary*
+   * projectimage field in *Projects → Default → Primary*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
@@ -802,24 +802,14 @@ export interface ProjectTypesSliceDefaultPrimary {
   projects: prismic.RichTextField;
 
   /**
-   * projectintro field in *Projects → Default → Primary*
+   * ProjectIntro field in *Projects → Default → Primary*
    *
-   * - **Field Type**: Text
+   * - **Field Type**: Rich Text
    * - **Placeholder**: My other projects include
    * - **API ID Path**: project_types.default.primary.projectintro
-   * - **Documentation**: https://prismic.io/docs/fields/text
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
    */
-  projectintro: prismic.KeyTextField;
-
-  /**
-   * WhichProType field in *Projects → Default → Primary*
-   *
-   * - **Field Type**: Content Relationship
-   * - **Placeholder**: *None*
-   * - **API ID Path**: project_types.default.primary.whichprotype
-   * - **Documentation**: https://prismic.io/docs/fields/content-relationship
-   */
-  whichprotype: prismic.ContentRelationshipField<"projects">;
+  projectintro: prismic.RichTextField;
 
   /**
    * callToActionLink1 field in *Projects → Default → Primary*
@@ -862,6 +852,22 @@ export interface ProjectTypesSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/fields/link
    */
   calltoactionlink3: prismic.LinkField<
+    string,
+    string,
+    unknown,
+    prismic.FieldState,
+    never
+  >;
+
+  /**
+   * callToActionLink4 field in *Projects → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: project_types.default.primary.calltoactionlink4
+   * - **Documentation**: https://prismic.io/docs/fields/link
+   */
+  calltoactionlink4: prismic.LinkField<
     string,
     string,
     unknown,
@@ -955,35 +961,15 @@ export interface ReachingOutSliceDefaultPrimary {
   companyname: prismic.KeyTextField;
 
   /**
-   * Submission field in *ReachingOut → Default → Primary*
+   * ContactingBack field in *ReachingOut → Default → Primary*
    *
    * - **Field Type**: Boolean
    * - **Placeholder**: *None*
    * - **Default Value**: false
-   * - **API ID Path**: reaching_out.default.primary.submission
+   * - **API ID Path**: reaching_out.default.primary.contactingback
    * - **Documentation**: https://prismic.io/docs/fields/boolean
    */
-  submission: prismic.BooleanField;
-
-  /**
-   * ErrorMessage field in *ReachingOut → Default → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: Incomplete!
-   * - **API ID Path**: reaching_out.default.primary.errormessage
-   * - **Documentation**: https://prismic.io/docs/fields/text
-   */
-  errormessage: prismic.KeyTextField;
-
-  /**
-   * Completion field in *ReachingOut → Default → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: Complete!
-   * - **API ID Path**: reaching_out.default.primary.completion
-   * - **Documentation**: https://prismic.io/docs/fields/text
-   */
-  completion: prismic.KeyTextField;
+  contactingback: prismic.BooleanField;
 }
 
 /**
