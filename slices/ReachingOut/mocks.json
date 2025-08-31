@@ -30,7 +30,7 @@
 			},
 			"contactingback": {
 				"__TYPE__": "BooleanContent",
-				"value": true
+				"value": false
 			}
 		},
 		"items": []

@@ -52,7 +52,7 @@ const ReachingOut: FC<ReachingOutProps> = ({ slice }) => {
       setLastname("");
       setEmail("");
       setPhone("");
-      setContactingback(true);
+      setContactingback(false);
     }
 
     setIsLoading(false);
@@ -186,16 +186,19 @@ const ReachingOut: FC<ReachingOutProps> = ({ slice }) => {
                     <span className="required-span inline mb-2 block text-lg font-bold leading-6 text-red-700">
                       * {" "}
                     </span>
-                      <input
-                        onChange={(e) => setContactingback(e.target.checked)}
-                        checked={contactingback}
-                        id="slice.primary.contactingback"
-                        className="required inline block relative mt-2 rounded-md shadow-sm border-0 py-1.5 pl-3 sm:text-sm sm:leading-6"
-                        aria-invalid="false"
-                        type="checkbox"
-                        name="contactingback"
-                        />
-                    </label>
+
+                    <input
+                      onChange={(e) => setContactingback(e.target.checked)}
+                      checked={contactingback}
+                      id="slice.primary.contactingback"
+                      className="required inline block relative mt-2 rounded-md shadow-sm border-0 py-1.5 pl-3 sm:text-sm sm:leading-6"
+                      placeholder="false"
+                      aria-invalid="false"
+                      type="checkbox"
+                      name="contactingback"
+                      required
+                    />
+                  </label>
                 </div>
               </div>
 
@@ -217,7 +220,7 @@ const ReachingOut: FC<ReachingOutProps> = ({ slice }) => {
                           aria-hidden="true">
 
                         </span>
-                        "Sending..."
+                        Sending...
                       </>
                     ) : "Send"}
                 </button>
