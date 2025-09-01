@@ -227,10 +227,10 @@ const ReachingOut: FC<ReachingOutProps> = ({ slice }) => {
               </div>
 
               <div className="bg-slate-100 flex flex-col">
-                {error &&
+                {error && 
                   error.map((e) => (
                     <div className={`${ success ? "text-green-800" : "text-red-600" } px-5 py-2`} key={e}>
-                      {e}
+                      {e} 
                     </div>
                   ))}
               </div>
