@@ -18,7 +18,7 @@ export async function POST(req: NextRequest) {
         await Contact.create({ firstname, lastname, email, phone, companyname, contactingback });
 
         return NextResponse.json({
-            msg: ['Form submitted successfully'],
+            msg: ['Form submitted successfully!'],
             success: true,
         });
     } catch(error) {
