@@ -1,7 +1,7 @@
 import { FC } from "react";
+import { PrismicNextImage } from "@prismicio/next";
 import { Content, isFilled } from "@prismicio/client";
 import { SliceComponentProps, PrismicRichText } from "@prismicio/react";
-import { PrismicNextImage } from "@prismicio/next";
 import { Bounded } from "@/components/Bounded";
 import { ButtonLink } from "@/components/ButtonLink";
 

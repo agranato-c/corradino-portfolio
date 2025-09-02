@@ -1,7 +1,7 @@
 import { FC } from "react";
-import { Content, isFilled } from "@prismicio/client";
 import { createClient } from "@/prismicio";
-import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
+import { Content } from "@prismicio/client";
+import { SliceComponentProps } from "@prismicio/react";
 import { Bounded } from "@/components/Bounded";
 import { ButtonLink } from "@/components/ButtonLink";
 

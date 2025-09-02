@@ -1,13 +1,12 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { asImageSrc, asText, isFilled } from "@prismicio/client";
-import { PrismicRichText } from "@prismicio/react";
-
 import { createClient } from "@/prismicio";
-import { Bounded } from "@/components/Bounded";
+import { PrismicRichText } from "@prismicio/react";
 import { PrismicNextImage } from "@prismicio/next";
-import { OtherProjectTypes } from "@/components/OtherProjectTypes";
+import { asImageSrc, asText } from "@prismicio/client";
+import { Bounded } from "@/components/Bounded";
 import { ButtonLink } from "@/components/ButtonLink";
+import { OtherProjectTypes } from "@/components/OtherProjectTypes";
 
 type Params = { uid: string };
 
@@ -19,7 +18,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
 console.log(slice?.primary);
   return (
     <>
-      <Bounded className="py-10">
+      <Bounded className="py-10 bg-black">
         <div className="grid grid-cols-1 items-center gap-10 pb-10 lg:grid-cols-2">
           <div className="relative mb-14 flex justify-center pb-10">
             <PrismicNextImage
@@ -27,8 +26,8 @@ console.log(slice?.primary);
               width={450}
               height={450}
               priority
-            alt=""
-            style={{ padding: "absolute 10px 10px align-items: flex-start" }}
+              alt=""
+              style={{ padding: "absolute 10px 10px align-items: flex-start" }}
             />
           </div>
 
@@ -44,9 +43,6 @@ console.log(slice?.primary);
               <div className="flex grid grid-cols-subgrid items-center gap-4 border-t border-neutral-700 pt-6">
                 <PrismicRichText field={slice?.primary.projects} />
               </div>
-              {/* {isFilled.richText(slice?.primary.projectintro) && (
-                <PrismicRichText field={slice?.primary.projectintro} />
-              )} */}
             </div>
           </div>
         </div>
@@ -55,17 +51,17 @@ console.log(slice?.primary);
       </Bounded>
     
       <ButtonLink
-        className="es-call-to-action__link relative z-50"
+        className="es-call-to-action__link relative z-50 border border-primary rounded-md"
         field={slice!.primary.calltoactionlink1} />
 
       <ButtonLink
-        className="es-call-to-action__link relative z-50"
+        className="es-call-to-action__link relative z-50 border border-primary rounded-md"
         field={slice!.primary.calltoactionlink2} />
 
       <ButtonLink
-        className="es-call-to-action__link relative z-50"
+        className="es-call-to-action__link relative z-50 border border-primary rounded-md"
         field={slice!.primary.calltoactionlink3} />
-
+      <br /> <br />
     </>
   );
 }

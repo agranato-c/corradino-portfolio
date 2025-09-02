@@ -65,7 +65,7 @@ const ReachingOut: FC<ReachingOutProps> = ({ slice }) => {
       className = "my-6 rounded-lg border-2 border-dashed bg-gray-100 p-2 dark:border-gray-200 dark:bg-muted space-y-8 text-left md:py-16 border-color: rgb(2, 80, 150); font-size: 16px" data-cyally-org-font-size="16">
         <div className="mx-auto max-w-7xl px-4 py-6 lg:px-6">
           <form
-            className="py-4 mt-4 border-t flex flex-col gap-5">
+            className="py-4 mt-4 flex flex-col gap-5">
             <div className="grid gap-x-6 gap-y-4">
               <div data-slice-type="form_field" data-slice-variation="default" className="col-span-full is-required">
                 <div>
@@ -207,7 +207,7 @@ const ReachingOut: FC<ReachingOutProps> = ({ slice }) => {
                   type="submit"
                   onClick={handleSubmit}
                   disabled={isLoading}
-                  className="py-4 mt-4 border-t flex flex-col gap-5 bg-green-700 p-3 text-white font-bold es-call-to-action__link relative z-50 items-center justify-center rounded-md h-10 px-4 py-2 border
+                  className="py-4 mt-4 flex flex-col gap-5 bg-green-700 p-3 text-white font-bold es-call-to-action__link relative z-50 items-center justify-center rounded-md h-10 px-4 py-2 border
                     border-primary text-blue-500 w-fit px-6 py-2 font-medium text-black shadow-[3px_3px_0px_black] transition-all hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none bg-[#194f99]"
                   aria-label="Go to the next step"
                   data-cya11y-org-font-size="16"
